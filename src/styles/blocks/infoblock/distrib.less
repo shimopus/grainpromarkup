@@ -1,0 +1,63 @@
+.gn-infoblock-distrib {
+    padding: 0 0 62px;
+    background: @color-infoblock-why-bg;
+    .font-light;
+    font-size: 18px;
+
+    &__header {
+        padding-right: 10px;
+        margin: 0 0 22px;
+        .font-regular;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    &__text {
+        padding: 0 15px 0 0;
+        line-height: 27px;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+    }
+
+    &__content {
+        padding: 24px 0 44px 108px;
+        display: flex;
+    }
+
+    &__left {
+        flex: 0 0 45%;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__right {
+        margin-left: auto;
+        flex: 0 0 50%;
+        position: relative;
+        z-index: 1;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: -92px;
+            top: -20px;
+            bottom: -120px;
+            right: 0;
+        }
+
+        &:before {
+            background: url("../images/devices.jpg") 53px 3px no-repeat;
+        }
+
+        &:after {
+            .icon_letters;
+            background-position: 0 72px;
+        }
+    }
+
+    &__button {
+        margin: 55px 25px 0 0;
+        text-align: center;
+    }
+}

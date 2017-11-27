@@ -1,0 +1,48 @@
+.gn-infoblock-why {
+    padding: 0 0 68px;
+    background: @color-infoblock-why-bg;
+    .font-light;
+    font-size: 18px;
+
+    &__header {
+        padding: 1px 0 0;
+        .font-regular;
+        font-size: 32px;
+    }
+
+    &__content {
+        padding: 51px 0 44px 108px;
+        display: flex;
+    }
+
+    &__left {
+        flex: 0 0 45%;
+    }
+
+    &__right {
+        margin-left: auto;
+        flex: 0 0 50%;
+    }
+
+    &__list {
+        margin-left: -10px;
+        position: relative;
+        z-index: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: -110px;
+            left: -101px;
+            width: 123px;
+            height: 152px;
+            .icon_trail;
+        }
+    }
+
+    &__button {
+        margin: 109px 25px 0 0;
+        text-align: center;
+    }
+}

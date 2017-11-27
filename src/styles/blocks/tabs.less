@@ -1,0 +1,16 @@
+.gn-tabs {
+
+    &-link {
+        padding: 0 0 1px;
+        background: linear-gradient(to right, @color-link-primary 0%,@color-link-primary 65%,fade(@color-link-primary, 0) 66%,fade(@color-link-primary, 0) 100%);
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        background-size: 21px 3px;
+
+        &._active {
+            color: @color-text-primary;
+            background: none;
+        }
+    }
+
+}

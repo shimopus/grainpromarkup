@@ -1,0 +1,49 @@
+.gn-footer {
+    background: @color-footer-bg;
+    color: @color-text-secondary;
+    font-size: 13px;
+    .font-light;
+
+    &__inner {
+        padding: 11px 0 14px;
+        margin: 0 262px 0 162px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column {
+        flex: 0 0 130px;
+
+        &._small {
+            flex: 0 0 118px;
+        }
+
+        &._smallest {
+            flex: 0 0 95px;
+        }
+
+        & + & {
+            margin-left: 15px;
+        }
+
+        &-header {
+            margin: 0 0 6px;
+            font-size: 13px;
+            .font-regular;
+        }
+
+        &-item {
+            & + & {
+                margin-top: 3px;
+            }
+        }
+    }
+
+    &__link {
+        color: @color-text-secondary;
+
+        &:hover {
+            color: @color-accent-1;
+        }
+    }
+}

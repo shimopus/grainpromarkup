@@ -1,0 +1,28 @@
+.gn-list-u {
+
+    &._big-indent &__item {
+        padding: 0 0 0 26px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 0 0 13px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            background: @color-accent-1;
+        }
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+}

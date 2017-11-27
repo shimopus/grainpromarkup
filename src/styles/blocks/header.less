@@ -1,0 +1,49 @@
+.gn-header {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 13px;
+    white-space: nowrap;
+    font-size: 15px;
+
+    &__logo {
+        margin: 0 35px 10px 0;
+        .icon_logo;
+        flex: 0 0 73px;
+        height: 53px;
+    }
+
+    &__nav {
+        flex: 0 1 100%;
+        display: flex;
+    }
+
+    &__link {
+        display: block;
+        padding: 0 0 9px;
+        color: @color-text-primary;
+        border-bottom: 4px solid transparent;
+
+        &._active,
+        &:hover {
+            border-bottom-color: @color-accent-1;
+        }
+
+        & + & {
+            margin-left: 40px;
+        }
+    }
+
+    &__contacts {
+        text-align: right;
+
+        &-phone {
+            .font-bold;
+            color: @color-text-primary;
+        }
+
+        &-time {
+            margin: 1px 0 0;
+            font-size: 11px;
+        }
+    }
+}

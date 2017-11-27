@@ -1,0 +1,15 @@
+.hover-default(@opacity: 0.6) {
+    &:hover {
+        opacity: @opacity;
+        cursor: pointer;
+    }
+}
+
+
+.active-default() {
+    &,
+    &:hover {
+        opacity: 1;
+        cursor: default;
+    }
+}

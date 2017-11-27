@@ -1,0 +1,17 @@
+.gn-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    &-content {
+        flex-grow: 1;
+    }
+
+    &-row {
+        min-width: 1024px; // TODO remove this after implement resolutions smaller than 1024
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

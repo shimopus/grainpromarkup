@@ -1,0 +1,35 @@
+{
+  "name": "Grain.pro",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Description",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "Me",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
+    "browser-sync": "^2.14.0",
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "~2.3.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-file-include": "^1.1.0",
+    "gulp-ignore": "^2.0.1",
+    "gulp-image-data-uri": "^1.2.1",
+    "gulp-less": "~3.1.0",
+    "gulp-load-plugins": "~1.2.4",
+    "gulp-plumber": "~1.1.0",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sourcemaps": "~1.6.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "serve": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean"
+  }
+}

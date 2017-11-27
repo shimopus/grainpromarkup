@@ -1,0 +1,45 @@
+<svg width="50" height="49" viewBox="0 0 50 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <desc>Created using Figma</desc>
+    <g id="Canvas" transform="translate(1679 503)">
+        <rect x="-1679" y="-503" width="50" height="49" fill="#E5E5E5"/>
+        <clipPath id="clip-0" clip-rule="evenodd">
+            <path d="M -1862 -729L -837 -729L -837 1460L -1862 1460L -1862 -729Z" fill="#FFFFFF"/>
+        </clipPath>
+        <g id="&#208;&#160;&#208;&#176;&#208;&#183;&#208;&#178;&#208;&#190;&#208;&#180;&#209;&#143;&#209;&#137;&#208;&#176;&#209;&#143;_1" clip-path="url(#clip-0)">
+            <path d="M -1862 -729L -837 -729L -837 1460L -1862 1460L -1862 -729Z" fill="#FFFFFF"/>
+            <g id="Rectangle 12">
+                <use xlink:href="#path0_fill" transform="matrix(1 0 0 -1 -1862 -335)" fill="#F2F2F2"/>
+            </g>
+            <g id="Group">
+                <g id="Group">
+                    <g id="Vector">
+                        <use xlink:href="#path1_fill" transform="translate(-1679 -503)" fill="#F2994A"/>
+                    </g>
+                </g>
+                <g id="Group">
+                    <g id="Vector">
+                        <use xlink:href="#path2_fill" transform="translate(-1655.4 -491.052)" fill="#F2994A"/>
+                    </g>
+                </g>
+                <g id="Group">
+                    <g id="Vector">
+                        <use xlink:href="#path3_fill" transform="matrix(-1.87446e-16 1 -1 -1.80023e-16 -1635.88 -478.112)" fill="#F2994A"/>
+                    </g>
+                </g>
+                <g id="Group">
+                    <g id="Vector">
+                        <use xlink:href="#path4_fill" transform="translate(-1656.71 -480.713)" fill="#F2994A"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_fill" d="M 0 0L 1025 0L 1025 316L 0 316L 0 0Z"/>
+        <path id="path1_fill" d="M 25 49C 11.2069 49 0 38.0172 0 24.5C 0 10.9828 11.2069 0 25 0C 38.7931 0 50 10.9828 50 24.5C 50 38.0172 38.7931 49 25 49ZM 25 1.2069C 11.9048 1.2069 1.23153 11.6667 1.23153 24.5C 1.23153 37.3333 11.9048 47.7931 25 47.7931C 38.0952 47.7931 48.7685 37.3333 48.7685 24.5C 48.7685 11.6667 38.0952 1.2069 25 1.2069Z"/>
+        <path id="path2_fill" d="M 2.62726 0L 0 0L 0 14.3218L 2.62726 14.3218L 2.62726 0Z"/>
+        <path id="path3_fill" d="M 0.885058 0L 0 0L 0 18.6371L 0.885058 18.6371L 0.885058 0Z"/>
+        <path id="path4_fill" d="M 2.70936 5.31034C 4.2057 5.31034 5.41872 4.12158 5.41872 2.65517C 5.41872 1.18876 4.2057 0 2.70936 0C 1.21302 0 0 1.18876 0 2.65517C 0 4.12158 1.21302 5.31034 2.70936 5.31034Z"/>
+    </defs>
+</svg>
