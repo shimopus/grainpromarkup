@@ -14,7 +14,7 @@ module.exports = {
     // LESS config
     less: {
         src: './src/styles/*.less',
-        dest: './dev/css'
+        dest: '../grain-pro'
     },
 
     // Icons config
@@ -31,7 +31,7 @@ module.exports = {
             './src/images/**/*.*',
             '!./src/images/icons/**/*.*'
         ],
-        dest: './dev/images'
+        dest: '../grain-pro/images'
     },
 
     // Fonts config
@@ -68,7 +68,7 @@ module.exports = {
     include: {
         basepath: './src/markup/',
         src: './src/markup/*.html',
-        dest: './dev/markup'
+        dest: './dev/markup',
     },
 
     // Plugins config

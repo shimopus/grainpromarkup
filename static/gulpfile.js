@@ -108,9 +108,9 @@ gulp.task('fonts', function() {
  */
 gulp.task('bsync', function() {
     bsync.init({
-        startPath: "/markup/",
+        startPath: "/static/dev/markup",
         server: {
-            baseDir: "./dev/"
+            baseDir: "../"
         }
     });
 });

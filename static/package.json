@@ -24,9 +24,9 @@
     "gulp-load-plugins": "~1.2.4",
     "gulp-plumber": "~1.1.0",
     "gulp-rimraf": "^0.2.1",
-    "gulp-sourcemaps": "~1.6.0"
+    "gulp-sourcemaps": "~1.6.0",
+    "datauri.template": "0.0.1"
   },
-  "dependencies": {},
   "scripts": {
     "serve": "gulp",
     "build": "gulp build",
