@@ -6,9 +6,18 @@
     padding: 0 17px;
     border-radius: 2px;
     text-align: center;
-    background: linear-gradient(180deg, @color-button-start 0%, rgba(255, 255, 255, 0) 100%), @color-button-end;
+    background: linear-gradient(180deg, @color-button-bg-start 0%, rgba(255, 255, 255, 0) 100%), @color-button-bg-end;
     .font-bold;
     font-size: 16px;
     color: @color-text-inverted;
     letter-spacing: 0.05em;
+
+    &._primary {
+        min-width: 172px;
+        padding: 0 10px;
+        font-size: 14px;
+        height: 36px;
+        line-height: 36px;
+        background: @color-button-primary-bg;
+    }
 }

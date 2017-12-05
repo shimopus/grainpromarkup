@@ -1,0 +1,49 @@
+.gn-list-o {
+    padding: 0;
+    counter-reset: olCounter;
+
+    &._row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &._row &__item {
+        flex: 1 0 33%;
+        margin: 0;
+        padding: 0 0 0 32px;
+        font-size: 24px;
+        line-height: 36px;
+
+        &:before {
+            top: -6px;
+            font-size: 48px;
+            line-height: 60px;
+            .font-regular;
+        }
+    }
+
+    &._row &__item + &__item {
+        margin-left: 30px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 0 0 20px;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            content:counter(olCounter);
+            counter-increment: olCounter;
+            color: @color-accent-1;
+        }
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+}

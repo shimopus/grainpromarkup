@@ -1,0 +1,35 @@
+.gn-filter {
+
+    &__content {
+        display: flex;
+        padding: 33px @page-layout-inner-padding-right 23px @page-layout-inner-padding-left + 8px;
+
+        &-inner {
+            flex: 0 0 @page-layout-main - 8px;
+            margin-right: -5px;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 4px 0 0;
+        font-size: 18px;
+        color: @color-text-secondary;
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 8px;
+        margin: -1px 2px 2px 0;
+        border-radius: 2px;
+        line-height: 27px;
+        font-size: 13px;
+        letter-spacing: 0.025em;
+        color: @color-text-faded;
+        white-space: nowrap;
+        background: @color-panel-primary;
+    }
+
+}

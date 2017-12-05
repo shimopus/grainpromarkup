@@ -1,0 +1,46 @@
+.gn-input {
+    @height: 36px;
+    @font-size: 13px;
+
+    display: flex;
+    position: relative;
+    z-index: 1;
+    padding: 0 12px;
+    height: @height;
+    line-height: @height;
+    font-size: @font-size;
+    color: @color-text-primary;
+    background: @color-text-inverted;
+
+    &__input {
+        flex-grow: 1;
+        background: transparent;
+        margin: 0;
+        padding: 2px 0 0;
+        border: 0;
+        height: @height;
+        width: 0;
+        font-size: @font-size;
+        color: @color-text-primary;
+    }
+
+    &__frame {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid @color-panel-primary;
+    }
+
+    &__input:focus + &__frame {
+        border-color: @color-accent-colored;
+    }
+
+    &__prefix {
+        color: @color-text-faded;
+        margin: 0 5px 0 0;
+    }
+
+}
