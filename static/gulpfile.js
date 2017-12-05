@@ -19,7 +19,7 @@ gulp.task('default', ['watch', 'build']);
 /**
  * Build
  */
-gulp.task('build', ['include', 'fonts', 'icons', 'less', 'images'], function() {
+gulp.task('build', ['include', 'fonts', 'scripts', 'icons', 'less', 'images'], function() {
     console.log('BUILD DONE');
 });
 
@@ -104,6 +104,20 @@ gulp.task('fonts', function() {
 
 
 /**
+ * Scripts
+ */
+gulp.task('scripts', function() {
+    return gulp.src(CONFIG.scripts.src)
+        .pipe(plugins.plumber({
+            errorHandler: onPlumberError
+        }))
+        .pipe(gulp.dest(CONFIG.scripts.dest))
+        .pipe(bsync.stream());
+});
+
+
+
+/**
  * Browser sync
  */
 gulp.task('bsync', function() {
@@ -126,6 +140,8 @@ gulp.task('watch', ['bsync'], function() {
     gulp.watch(CONFIG.watch.less, ['less']);
     gulp.watch(CONFIG.watch.icons, ['icons']);
     gulp.watch(CONFIG.watch.images, ['images']);
+    gulp.watch(CONFIG.watch.fonts, ['fonts']);
+    gulp.watch(CONFIG.watch.scripts, ['scripts']);
 });
 
 

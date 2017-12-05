@@ -40,6 +40,12 @@ module.exports = {
         dest: './dev/fonts'
     },
 
+    // Scripts config
+    scripts: {
+        src: './src/scripts/*',
+        dest: './dev/scripts'
+    },
+
     // Browser Sync config
     bsync: {
         proxy: 'localhost:8080'
@@ -55,6 +61,8 @@ module.exports = {
             'src/styles/*.less',
             'src/styles/**/*.less'
         ],
+        fonts: 'src/fonts/*',
+        scripts: 'src/scripts/*',
         icons: 'src/images/icons/**/*',
         images: 'src/images/*.*'
     },
@@ -68,7 +76,7 @@ module.exports = {
     include: {
         basepath: './src/markup/',
         src: './src/markup/*.html',
-        dest: './dev/markup',
+        dest: './dev/markup'
     },
 
     // Plugins config

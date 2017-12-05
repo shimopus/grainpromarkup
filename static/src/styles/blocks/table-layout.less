@@ -1,0 +1,18 @@
+.gn-table-layout {
+
+    &__content {
+        display: flex;
+        padding: 0 @page-layout-inner-padding-right 0 @page-layout-inner-padding-left;
+
+        &-main {
+            flex: 0 0 @page-layout-main;
+        }
+
+        &-aside {
+            display: flex;
+            flex: 1 1 auto;
+            margin: 0 0 0 @page-layout-aside-margin;
+        }
+    }
+
+}
