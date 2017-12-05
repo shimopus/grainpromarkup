@@ -28,14 +28,14 @@ get_header(); ?>
     <section class="gn-infoblock-why">
         <div class="gn-page-row">
 
-            <div class="gn-infoblock-why__content">
+            <div class="gn-infoblock-why__content jsTabsWrapper">
                 <div class="gn-infoblock-why__left">
 
                     <h2 class="gn-infoblock-why__header">
                         Зачем Grain.pro<br>
-                        <a class="gn-tabs-link _active" href="#sellers">продавцам</a>
+                        <a class="gn-tabs-link _active jsTabsLink" href="#sellers">продавцам</a>
                         и
-                        <a class="gn-tabs-link" href="#buyers">покупателям</a>
+                        <a class="gn-tabs-link jsTabsLink" href="#buyers">покупателям</a>
                     </h2>
 
                     <div class="gn-infoblock-why__button">
@@ -44,10 +44,16 @@ get_header(); ?>
                 </div>
                 <div class="gn-infoblock-why__right">
 
-                    <ul class="gn-infoblock-why__list gn-list-i">
+                    <ul class="gn-infoblock-why__list gn-list-i jsTabsTab _active" data-tab="#sellers">
                         <li class="gn-list-i__item _binoculars">Показывает покупателей, которым подходит ваше предложение по цене с учетом стоимости доставки</li>
                         <li class="gn-list-i__item _wheat">Позволяет легко оценить ваше предложение относительно других продавцов</li>
-                        <li class="gn-list-i__item _plane">Проводит рассылку вашего объявления по  покупателям</li>
+                        <li class="gn-list-i__item _plane">Проводит рассылку вашего объявления по покупателям</li>
+                    </ul>
+
+                    <ul class="gn-infoblock-why__list gn-list-i jsTabsTab" data-tab="#buyers">
+                        <li class="gn-list-i__item _binoculars">Показывает цены с доставкой на нужную вам станцию</li>
+                        <li class="gn-list-i__item _wheat">Позволяет легко сравнить предложения и выбрать оптимальное</li>
+                        <li class="gn-list-i__item _plane">Проводит рассылку вашего объявления по продавцам</li>
                     </ul>
 
                 </div>
@@ -89,6 +95,61 @@ get_header(); ?>
 
                 <div class="gn-infoblock-advantages__button">
                     <button class="gn-button">Подать объявление</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gn-infoblock-start">
+        <div class="gn-page-row">
+            <div class="gn-infoblock-start__content">
+                <h2 class="gn-infoblock-start__header">
+                    С чего начать:
+                </h2>
+
+                <ol class="gn-infoblock-start__list gn-list-o _row">
+                    <li class="gn-list-o__item">Посмотрите объявления о <a href="./buy.html">покупке</a> и&nbsp;<a href="./sell.html">продаже</a> пшеницы</li>
+                    <li class="gn-list-o__item"><a href="./subscribe.html">Подпишитесь</a> на рассылку объявлений на вашу почту</li>
+                    <li class="gn-list-o__item"><a href="./submit-ads.html">Разместите</a> свое объявление на сайте</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="gn-contact-panel">
+        <div class="gn-page-row">
+            <div class="gn-contact-panel__panel">
+                <h2 class="gn-contact-panel__header">
+                    Остались вопросы?
+                </h2>
+                <div class="gn-contact-panel__content">
+                    <div class="gn-contact-panel__left">
+                        <div class="gn-contact-panel__item">
+                            позвоните нам:
+                            <span class="gn-contact-panel__big">+7 (916) 549-19-89</span>
+                        </div>
+
+                        <div class="gn-contact-panel__item">
+                            напишите на почту
+                            <a class="gn-contact-panel__big" href="mailto:p@grain.pro">p@grain.pro</a>
+                        </div>
+                    </div>
+                    <div class="gn-contact-panel__right">
+                        или оставьте свой номер:
+                        <form class="gn-contact-panel__form">
+
+                            <!-- base input markup-->
+                            <div class="gn-input gn-contact-panel__input">
+                                <span class="gn-input__prefix">+7</span>
+                                <input class="gn-input__input" type="text" pattern="^(\(?[0-9]{3}\)?( |)[0-9]{3}( |\-|)[0-9]{2}( |\-|)[0-9]{2})$">
+                                <div class="gn-input__frame"></div>
+                            </div>
+                            <!-- /base input markup-->
+
+                            <button class="gn-contact-panel__button gn-button _primary">Перезвоните мне</button>
+                        </form>
+                        <div class="gn-contact-panel__warning">
+                            Нажимая на кнопку, вы соглашаетесь с <a href="./privacy-policy.html">политикой конфиденциальности</a>.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
