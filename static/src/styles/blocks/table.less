@@ -1,6 +1,8 @@
 .gn-table {
     font-size: 13px;
     line-height: 16px;
+    letter-spacing: -0.015em;
+    color: #333;
 
     &__header,
     &__item {
@@ -10,16 +12,24 @@
 
     &__header-cell,
     &__item-cell {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        & + & {
+            padding-left: 3px;
+        }
 
         &._right {
+            padding-right: 1px;
             text-align: right;
         }
 
-        &:nth-child(1) { width: 150px; }
+        &:nth-child(1) { width: 145px; }
         &:nth-child(2) { width: 122px; }
-        &:nth-child(3) { width: 160px; }
-        &:nth-child(4) { width: 55px; }
-        &:nth-child(5) { width: 50px; }
+        &:nth-child(3) { width: 155px; }
+        &:nth-child(4) { width: 48px; }
+        &:nth-child(5) { width: 54px; }
         &:nth-child(6) { width: auto; }
     }
 
@@ -36,6 +46,7 @@
 
         &-wrapper {
             padding: 14px 8px;
+            margin: 0 0 6px;
             border: 1px solid @color-panel-primary;
         }
 
@@ -47,10 +58,77 @@
             vertical-align: top;
         }
 
+        &-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &._small {
+                margin: 1px 0 0;
+                font-size: 11px;
+                color: #4F4F4F;
+
+                & + & {
+                    margin-top: -1px;
+                }
+            }
+
+            &._tiny {
+                margin: 1px 0 -1px;
+                font-size: 10px;
+                color: #4F4F4F;
+            }
+        }
+
     }
 
     &__link {
         color: #4F4F4F;
         text-decoration: underline;
+    }
+
+    &__important {
+        color: #000;
+    }
+
+    &__big {
+        font-size: 14px;
+    }
+
+    &__medium-weight {
+        .font-medium;
+    }
+
+    &__table {
+        width: 100%;
+
+        td:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+    &__infoblock {
+        margin-top: 16px;
+    }
+
+    &__class {
+        margin-left: 2px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        width: 34px;
+        font-size: 12px;
+        color: #fff;
+
+        &._orange {
+            background: #F2C94C;
+        }
+
+        &._red {
+            background: #FF7575;
+        }
+
+        &._gray {
+            background: #BDBDBD;
+        }
     }
 }
