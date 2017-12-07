@@ -19,7 +19,7 @@
         $("img.gn-loader").toggleClass("_hidden");
         $(".gn-table").remove();
 
-        $.get("https://grainpro.herokuapp.com/pages/market-table/site", $.extend(params, {bidType: 'BUY', v: "2"}))
+        $.get("https://grainpro.herokuapp.com/pages/market-table/site", $.extend(params, {bidType: $bidType, v: "2"}))
             .done(function (data) {
                 $("img.gn-loader").toggleClass("_hidden");
                 tableContent.append(data);

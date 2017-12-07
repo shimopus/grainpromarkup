@@ -6,6 +6,10 @@
 wp_enqueue_style( 'jquery-ui-structure', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' );
 wp_enqueue_style( 'jquery-ui-theme', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' );
 
+wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.js', array('jquery'), '1.12.1-custom', true );
+wp_enqueue_style( 'fancybox-theme', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.min.css' );
+
+
 wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.min.js', array('jquery'), '1.12.1-custom', true );
 wp_enqueue_script( 'stations', get_template_directory_uri() . '/js/table.js', array('jquery', 'jquery-ui'), '07122017', true );
 
@@ -19,6 +23,7 @@ $api_request = "https://grainpro.herokuapp.com/pages/market-table/site?bidType="
 
 $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 ?>
+    <script>window.$bidType = "<?php print $bidTypeKey ?>";</script>
     <section class="gn-station">
         <div class="gn-page-row">
 
