@@ -3,6 +3,12 @@
  * Template Name: Таблица заявок
  */
 
+wp_enqueue_style( 'jquery-ui-structure', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' );
+wp_enqueue_style( 'jquery-ui-theme', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' );
+
+wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.min.js', array('jquery'), '1.12.1-custom', true );
+wp_enqueue_script( 'stations', get_template_directory_uri() . '/js/table.js', array('jquery', 'jquery-ui'), '07122017', true );
+
 get_header();
 
 $bidTypeField = get_field_object('bids_type');
@@ -23,7 +29,7 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 
                     <!-- base input markup-->
                     <div class="gn-input gn-station__input">
-                        <input class="gn-input__input" type="text" placeholder="код или название станции">
+                        <input class="gn-input__input jsStationsAutocomplete" type="text" placeholder="код или название станции">
                         <div class="gn-input__frame"></div>
                     </div>
                     <!-- /base input markup-->
@@ -43,14 +49,11 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                 <div class="gn-filter__content-inner">
                     <span class="gn-filter__title">Объявления по продаже пшеницы</span>
                     <span class="gn-filter__item _active">все классы</span>
-                    <span class="gn-filter__item">фураж</span>
-                    <span class="gn-filter__item">без класса</span>
-                    <span class="gn-filter__item">3 класс</span>
-                    <span class="gn-filter__item">4 класс</span>
-                    <span class="gn-filter__item">5 класс</span>
-                    <span class="gn-filter__item">1 класс</span>
-                    <span class="gn-filter__item">2 класс</span>
-                    <span class="gn-filter__item">3 класс</span>
+                    <span class="gn-filter__item" data-class="1class">фураж</span>
+                    <span class="gn-filter__item" data-class="withoutclass">без класса</span>
+                    <span class="gn-filter__item" data-class="3class">3 класс</span>
+                    <span class="gn-filter__item" data-class="4class">4 класс</span>
+                    <span class="gn-filter__item" data-class="5class">5 класс</span>
                 </div>
             </div>
         </div>
@@ -61,7 +64,8 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
         <div class="gn-page-row">
 
             <div class="gn-table-layout__content">
-                <div class="gn-table-layout__content-main">
+                <div class="gn-table-layout__content-main jsTableContent">
+                    <img src="<?php print get_template_directory_uri() . '/images/Magnify.svg' ?>" alt="Загрузка..." class="gn-loader _hidden"/>
                     <?php print $tableHTML ?>
                 </div>
                 <div class="gn-table-layout__content-aside">
