@@ -29,12 +29,19 @@
         line-height: 40px;
     }
 
+    &._submit {
+        height: 36px;
+        line-height: 36px;
+        width: 100%;
+        min-width: 200px;
+    }
+
     &[disabled] {
         background: @color-panel-secondary;
     }
 
     &__message {
-        padding: 4px 0 0;
+        padding: 4px 5px;
         position: absolute;
         top: 0;
         left: 0;
@@ -56,5 +63,9 @@
 
     &._show-message &__message {
         visibility: visible;
+    }
+
+    &._submit._show-message {
+        background: #6FCF97;
     }
 }

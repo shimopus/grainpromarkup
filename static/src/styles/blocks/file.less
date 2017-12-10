@@ -1,0 +1,42 @@
+.gn-file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__input {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    &__button {
+        min-width: 136px;
+        padding: 0 10px;
+        font-size: 13px;
+        height: 36px;
+        line-height: 34px;
+        color: @color-text-inverted;
+        background: @color-button-primary-bg;
+        border: 1px solid @color-panel-secondary;
+        text-align: center;
+        .font-bold;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+        user-select: none;
+    }
+
+    &:hover &__button {
+        opacity: .6;
+    }
+
+    &__label {
+        font-size: 14px;
+        line-height: 18px;
+        color: @color-text-alert;
+
+        &._filled {
+            color: @color-text-faded;
+        }
+    }
+}

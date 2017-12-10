@@ -1,0 +1,65 @@
+.gn-form {
+
+    &__item {
+        & + & {
+            margin-top: 23px;
+        }
+
+        & + &._small-indent {
+            margin-top: 13px;
+        }
+
+        & + &._medium-indent {
+            margin-top: 20px;
+        }
+
+        &._submit {
+            margin: 47px auto 0;
+            width: 233px;
+            text-align: center;
+        }
+
+        &._row {
+            display: flex;
+        }
+
+        &-inner {
+            flex: 1 1 100%;
+
+            & + & {
+                margin-left: 7px;
+            }
+
+            &._large {
+                flex-basis: 130%;
+            }
+        }
+
+    }
+
+    &__label {
+        display: block;
+        margin: 0 0 7px;
+        color: @color-text-faded;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    &__input.gn-input {
+        background: @color-panel-primary;
+
+        &._filled {
+            background: @color-text-inverted;
+        }
+    }
+
+    &__radio-group {
+        padding: 0 3px 1px;
+    }
+
+    &__message {
+        margin: 3px 0 30px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
