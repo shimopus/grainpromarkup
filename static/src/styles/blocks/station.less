@@ -38,7 +38,13 @@
 
     &__link {
         font-size: 16px;
-        color: @color-text-faded;
+        .hover-default;
+
+        &,
+        &:active,
+        &:focus {
+            color: @color-text-faded;
+        }
     }
 
 }

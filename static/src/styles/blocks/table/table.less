@@ -25,7 +25,7 @@
             text-align: right;
         }
 
-        &:nth-child(1) { width: 145px; }
+        &:nth-child(1) { width: 145px; padding-right: 2px; }
         &:nth-child(2) { width: 122px; }
         &:nth-child(3) { width: 155px; }
         &:nth-child(4) { width: 48px; }
@@ -34,7 +34,7 @@
     }
 
     &__header {
-        color: #4F4F4F;
+        color: @color-text-faded-2;
         font-size: 12px;
 
         &-wrapper {
@@ -46,8 +46,11 @@
 
         &-wrapper {
             padding: 14px 8px;
-            margin: 0 0 6px;
             border: 1px solid @color-panel-primary;
+
+            & + & {
+                margin-top: 6px;
+            }
         }
 
         &-wrapper:nth-child(2n) {
@@ -65,7 +68,7 @@
             &._small {
                 margin: 1px 0 0;
                 font-size: 11px;
-                color: #4F4F4F;
+                color: @color-text-faded-2;
 
                 & + & {
                     margin-top: -1px;
@@ -75,15 +78,25 @@
             &._tiny {
                 margin: 1px 0 -1px;
                 font-size: 10px;
-                color: #4F4F4F;
+                color: @color-text-faded-2;
             }
         }
 
     }
 
     &__link {
-        color: #4F4F4F;
-        text-decoration: underline;
+        .hover-default;
+
+        &,
+        &:active,
+        &:focus {
+            color: @color-text-faded-2;
+            text-decoration: underline;
+        }
+    }
+
+    &__item-content._small &__link {
+        text-decoration: none;
     }
 
     &__important {
@@ -123,12 +136,20 @@
             background: #F2C94C;
         }
 
-        &._red {
-            background: #FF7575;
-        }
+        &._5th { background: #FF7575; }
+        &._4th { background: #F2994A; }
+        &._3rd { background: #F2C94C; }
+        &._2nd { background: #6FCF97; }
+        &._1st { background: #2D9CDB; }
+        &._none { background: #BDBDBD; }
+    }
 
-        &._gray {
-            background: #BDBDBD;
-        }
+    &__footer {
+        padding: 4px 10px 10px;
+        margin: 0 0 9px;
+        line-height: 15px;
+        font-size: 12px;
+        text-align: center;
+        color: #828282;
     }
 }

@@ -30,6 +30,15 @@
         color: @color-text-faded;
         white-space: nowrap;
         background: @color-panel-primary;
+        cursor: pointer;
+        .hover-default;
+
+        &._active {
+            background: @color-panel-secondary;
+            color: @color-text-inverted;
+            .font-bold;
+            .active-default;
+        }
     }
 
 }
