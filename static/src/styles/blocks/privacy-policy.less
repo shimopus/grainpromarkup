@@ -1,0 +1,49 @@
+.gn-privacy-policy {
+
+    &__content {
+        padding: 0 0 76px;
+    }
+
+    &__header {
+        margin: 62px 0 30px;
+        .font-regular;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    &__text {
+        padding: 0 100px;
+        font-size: 18px;
+        line-height: 23px;
+        .font-light;
+
+        strong {
+            .font-regular;
+        }
+
+        ol {
+            counter-reset: l1;
+            margin: 0 0 45px;
+        }
+
+        ol li {
+            &:before {
+                content: counter(l1)". ";
+                counter-increment: l1;
+            }
+        }
+
+        ol ol {
+            counter-reset: l2;
+            margin: 0;
+        }
+
+        ol ol li {
+            &:before {
+                content: counter(l1)"."counter(l2)" ";
+                counter-increment: l2;
+            }
+        }
+    }
+}

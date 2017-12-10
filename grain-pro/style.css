@@ -563,6 +563,10 @@ input:focus {
   white-space: nowrap;
   background: #F2F2F2;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gn-filter__item:hover {
   opacity: 0.7;
@@ -665,6 +669,10 @@ input:focus {
   padding: 0 0 9px;
   color: #000000;
   border-bottom: 4px solid transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gn-header__link._active,
 .gn-header__link:hover {
@@ -929,6 +937,10 @@ input:focus {
   color: #4F4F4F;
   border-bottom: 1px dashed #4F4F4F;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gn-input__clear:hover {
   opacity: 0.7;
@@ -1085,12 +1097,56 @@ input:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.gn-page-content._bordered {
+  border-top: 10px solid #F2F2F2;
+}
 .gn-page-row {
   min-width: 1024px;
   max-width: 1024px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+.gn-privacy-policy__content {
+  padding: 0 0 76px;
+}
+.gn-privacy-policy__header {
+  margin: 62px 0 30px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+.gn-privacy-policy__text {
+  padding: 0 100px;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.gn-privacy-policy__text strong {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gn-privacy-policy__text ol {
+  counter-reset: l1;
+  margin: 0 0 45px;
+}
+.gn-privacy-policy__text ol li:before {
+  content: counter(l1) ". ";
+  counter-increment: l1;
+}
+.gn-privacy-policy__text ol ol {
+  counter-reset: l2;
+  margin: 0;
+}
+.gn-privacy-policy__text ol ol li:before {
+  content: counter(l1) "." counter(l2) " ";
+  counter-increment: l2;
 }
 .gn-station {
   background: #F2F2F2;
@@ -1370,6 +1426,10 @@ input:focus {
   font-style: normal;
   color: #F2994A;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gn-terms__header:before {
   content: '';
