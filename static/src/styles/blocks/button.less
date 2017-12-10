@@ -1,4 +1,5 @@
 .gn-button {
+    position: relative;
     display: inline-block;
     min-width: 260px;
     height: 40px;
@@ -11,6 +12,8 @@
     font-size: 16px;
     color: @color-text-inverted;
     letter-spacing: 0.05em;
+    white-space: nowrap;
+    user-select: none;
 
     &._primary {
         min-width: 172px;
@@ -24,5 +27,34 @@
     &._big {
         height: 40px;
         line-height: 40px;
+    }
+
+    &[disabled] {
+        background: @color-panel-secondary;
+    }
+
+    &__message {
+        padding: 4px 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        visibility: hidden;
+        color: @color-text-inverted;
+        .font-bold;
+        font-size: 12px;
+        line-height: 15px;
+        white-space: normal;
+    }
+
+    // show message
+    &._show-message {
+        color: transparent;
+    }
+
+    &._show-message &__message {
+        visibility: visible;
     }
 }

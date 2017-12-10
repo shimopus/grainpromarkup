@@ -391,16 +391,15 @@ p {
 a {
   color: #2D9CDB;
 }
+a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 a,
 a:hover {
   cursor: pointer;
   text-decoration: none;
   outline: none;
-}
-a:hover,
-a:hover:hover {
-  opacity: 0.7;
-  cursor: pointer;
 }
 a:focus,
 a:active {
@@ -438,6 +437,7 @@ input:focus {
   display: block;
 }
 .gn-button {
+  position: relative;
   display: inline-block;
   min-width: 260px;
   height: 40px;
@@ -453,6 +453,11 @@ input:focus {
   font-size: 16px;
   color: #FFFFFF;
   letter-spacing: 0.05em;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gn-button._primary {
   min-width: 172px;
@@ -465,6 +470,32 @@ input:focus {
 .gn-button._big {
   height: 40px;
   line-height: 40px;
+}
+.gn-button[disabled] {
+  background: #BDBDBD;
+}
+.gn-button__message {
+  padding: 4px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  visibility: hidden;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  white-space: normal;
+}
+.gn-button._show-message {
+  color: transparent;
+}
+.gn-button._show-message .gn-button__message {
+  visibility: visible;
 }
 .gn-contact-panel__panel {
   max-width: 756px;
@@ -656,6 +687,10 @@ input:focus {
           flex: 0 0 73px;
   height: 53px;
 }
+.gn-header__logo,
+.gn-header__logo:hover {
+  opacity: 1;
+}
 .gn-header__nav {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
@@ -673,6 +708,10 @@ input:focus {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.gn-header__link,
+.gn-header__link:hover {
+  opacity: 1;
 }
 .gn-header__link._active,
 .gn-header__link:hover {
