@@ -13,14 +13,18 @@
             margin-top: 20px;
         }
 
+        &._negative-indent {
+            margin-top: -4px;
+        }
+
         &._submit {
             margin: 47px auto 0;
             width: 233px;
             text-align: center;
-        }
 
-        &._row {
-            display: flex;
+            &._wide {
+                width: 254px;
+            }
         }
 
         &-inner {
@@ -61,5 +65,21 @@
         margin: 3px 0 30px;
         font-size: 12px;
         line-height: 15px;
+    }
+
+    &__sub {
+        margin: 7px 0 -10px;
+        text-align: right;
+
+        &-link {
+            cursor: pointer;
+            color: @color-text-secondary;
+            font-size: 15px;
+            .hover-default;
+        }
+    }
+
+    &__row {
+        display: flex;
     }
 }

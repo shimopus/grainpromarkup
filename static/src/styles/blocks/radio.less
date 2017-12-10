@@ -5,6 +5,22 @@
     cursor: pointer;
     color: @color-text-faded-2;
 
+    &._big {
+        font-size: 17px;
+    }
+
+    &._big &__icon {
+        margin: -4px 8px 0 -5px;
+    }
+
+    &._big &__text {
+        line-height: 21px;
+    }
+
+    &._big + &._big {
+        margin-left: 28px;
+    }
+
     & + & {
         margin-left: 24px;
     }
