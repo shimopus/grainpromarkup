@@ -144,7 +144,19 @@ get_header(); ?>
                             </div>
                             <!-- /base input markup-->
 
-                            <button class="gn-contact-panel__button gn-button _primary">Перезвоните мне</button>
+                            <!-- button before -->
+                            <!--<button class="gn-contact-panel__button gn-button _primary">-->
+                            <!--Перезвоните мне-->
+                            <!--<span class="gn-button__message">Спасибо! Мы перезвоним вам в ближайшее время</span>-->
+                            <!--</button>-->
+                            <!-- /button before -->
+
+                            <!-- button after -->
+                            <button class="gn-contact-panel__button gn-button _primary _show-message" disabled>
+                                Перезвоните мне
+                                <span class="gn-button__message">Спасибо! Мы перезвоним вам в ближайшее время</span>
+                            </button>
+                            <!-- /button after -->
                         </form>
                         <div class="gn-contact-panel__warning">
                             Нажимая на кнопку, вы соглашаетесь с <a href="./privacy-policy.html">политикой конфиденциальности</a>.

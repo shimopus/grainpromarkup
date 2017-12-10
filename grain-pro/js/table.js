@@ -15,7 +15,6 @@
             params = {code: code};
         }
 
-
         $("img.gn-loader").toggleClass("_hidden");
         $(".gn-table").remove();
 
@@ -23,6 +22,8 @@
             .done(function (data) {
                 $("img.gn-loader").toggleClass("_hidden");
                 tableContent.append(data);
+
+                activateYaMetrica();
 
                 if (currentCarouselId) {
                     $("#" + currentCarouselId).click();
@@ -40,7 +41,9 @@
     }
 
     function appendStationSelector() {
-        $("input.jsStationsAutocomplete").autocomplete({
+        var stationSelector = $("input.jsStationsAutocomplete");
+
+        stationSelector.autocomplete({
             source: function (request, response) {
                 $.getJSON("https://grainpro.herokuapp.com/api/_search/stations", {
                     query: request.term
@@ -53,6 +56,11 @@
                 console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
                 reloadTable(ui.item.id);
             }
+        });
+
+        $(".gn-input__clear").click(function () {
+            stationSelector.val("");
+            reloadTable();
         });
     }
 
