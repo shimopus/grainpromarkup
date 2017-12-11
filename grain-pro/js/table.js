@@ -24,6 +24,7 @@
                 tableContent.append(data);
 
                 activateYaMetrica();
+                filterTableByClass(filterClass);
 
                 if (currentCarouselId) {
                     $("#" + currentCarouselId).click();
@@ -145,9 +146,12 @@
         });
     }
 
+    var filterClass = null;
+
     $('.gn-filter__item').click(function () {
-       filterTableByClass($(this).data("class"));
-       $(".gn-filter__item._active").removeClass("_active");
-       $(this).addClass("_active");
+        filterClass = $(this).data("class");
+        filterTableByClass(filterClass);
+        $(".gn-filter__item._active").removeClass("_active");
+        $(this).addClass("_active");
     });
 })(jQuery);

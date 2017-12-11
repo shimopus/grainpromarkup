@@ -3,6 +3,8 @@
  * Template Name: Домашняя страница
  */
 
+wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/tabs.js', array(), '07122017', true );
+
 get_header(); ?>
 
 
