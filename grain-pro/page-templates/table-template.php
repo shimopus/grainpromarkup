@@ -18,13 +18,12 @@ get_header();
 
 $bidTypeField = get_field_object('bids_type');
 $bidTypeValue = $bidTypeField['value'];
-$bidTypeKey = $bidTypeField['choices'][$bidTypeValue];
 
-$api_request = "https://grainpro.herokuapp.com/pages/market-table/site?bidType=".$bidTypeKey."&v=2";
+$api_request = "https://grainpro.herokuapp.com/pages/market-table/site?bidType=".$bidTypeValue."&v=2";
 
 $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 ?>
-    <script>window.$bidType = "<?php print $bidTypeKey ?>";</script>
+    <script>window.$bidType = "<?php print $bidTypeValue ?>";</script>
 
     <section class="gn-station">
         <div class="gn-page-row">
@@ -147,6 +146,5 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
     </section>
 
 <?php
-get_sidebar();
 get_footer();
 
