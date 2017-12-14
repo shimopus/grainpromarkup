@@ -7,6 +7,8 @@ $faqCategories = get_categories(array (
     'parent' => 10 //Вопросы-ответы
 ));
 
+wp_enqueue_script( 'q_and_a', get_template_directory_uri() . '/js/q_and_a.js', array(), '07122017', true );
+
 get_header();?>
 
 <?php
@@ -16,7 +18,7 @@ if( $faqCategories ) : ?>
             <div class="gn-filter__centered-content">
                 <?php
                 foreach( $faqCategories as $cat ) : ?>
-                    <span class="gn-filter__item" data-catId="<?php print $cat->cat_ID; ?>"><?php print $cat->name; ?></span>
+                    <span class="gn-filter__item jsFAQFilter" data-catId="<?php print $cat->cat_ID; ?>"><?php print $cat->name; ?></span>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -27,7 +29,7 @@ foreach ($faqCategories as $cat) : $subCategories = get_categories(array(
 )) ?>
     <section class="gn-faq">
         <div class="gn-page-row">
-            <div class="gn-faq__content" id="<?php print $cat->cat_ID; ?>">
+            <div class="gn-faq__content jsFAQContent" id="<?php print $cat->cat_ID; ?>">
                 <h2 class="gn-faq__header">Вопрос-ответ</h2>
                 <?php foreach ($subCategories as $subCat) : ?>
                 <div class="gn-faq__section">
@@ -40,7 +42,7 @@ foreach ($faqCategories as $cat) : $subCategories = get_categories(array(
                     foreach ($questions as $question) : ?>
 
                         <div class="gn-faq__item">
-                            <div class="gn-faq__question jsBlockToggle" id="<?php echo $question->ID; ?>"><?php echo $question->post_title; ?></div>
+                            <div class="gn-faq__question jsQuestionBlock" id="<?php echo $question->ID; ?>"><?php echo $question->post_title; ?></div>
                             <div class="gn-faq__answer">
                                 <div class="gn-faq__answer-inner">
                                     <?php echo $question->post_content; ?>

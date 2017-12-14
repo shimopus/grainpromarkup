@@ -11,7 +11,7 @@ wp_enqueue_style( 'fancybox-theme', get_template_directory_uri() . '/js/fancybox
 
 wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.min.js', array('jquery'), '1.12.1-custom', true );
 
-wp_enqueue_script( 'table', get_template_directory_uri() . '/js/table.js', array('jquery', 'jquery-ui'), '07122017', true );
+wp_enqueue_script( 'table', get_template_directory_uri() . '/js/table.js', array('jquery', 'jquery-ui'), '14122017', true );
 wp_enqueue_script( 'toggle', get_template_directory_uri() . '/js/toggle.js', array(), '07122017', true );
 
 get_header();
@@ -73,6 +73,7 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
             <div class="gn-table-layout__content">
                 <div class="gn-table-layout__content-main jsTableContent">
                     <img src="<?php print get_template_directory_uri() . '/images/Magnify.svg' ?>" alt="Загрузка..." class="gn-loader _hidden"/>
+                    <div class="jsTableError _hidden">Что-то пошло не так :(. Сообщите нам об этом, пожалуйста, любым удобным способом связи, указанным на сайте.</div>
                     <?php print $tableHTML ?>
                 </div>
                 <div class="gn-table-layout__content-aside">

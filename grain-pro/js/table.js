@@ -1,4 +1,8 @@
 (function ($, undefined) {
+    var imgLoader = $("img.gn-loader"),
+        tableError = $("jsTableError"),
+        hiddenClass = hiddenClass;
+
     activateYaMetrica();
     appendStationSelector();
 
@@ -15,12 +19,13 @@
             params = {code: code};
         }
 
-        $("img.gn-loader").toggleClass("_hidden");
-        $(".gn-table").remove();
+        imgLoader.toggleClass(hiddenClass);
+        $(".jsTable").remove();
+        tableError.removeClass(hiddenClass).addClass(hiddenClass);
 
         $.get("https://grainpro.herokuapp.com/pages/market-table/site", $.extend(params, {bidType: $bidType, v: "2"}))
             .done(function (data) {
-                $("img.gn-loader").toggleClass("_hidden");
+                imgLoader.toggleClass(hiddenClass);
                 tableContent.append(data);
 
                 activateYaMetrica();
@@ -36,8 +41,8 @@
                 }
             })
             .fail(function () {
-                $("img.gn-loader").toggleClass("_hidden");
-                tableContent.append("Что-то пошло не так :(. Сообщите нам об этом, пожалуйста, любым удобным способом связи, указанным на сайте.");
+                imgLoader.toggleClass(hiddenClass);
+                tableError.removeClass(hiddenClass);
             });
     }
 
