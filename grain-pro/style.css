@@ -361,6 +361,9 @@ th {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+html {
+  overflow: hidden;
+}
 html,
 body {
   height: 100%;

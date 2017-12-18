@@ -68,9 +68,9 @@
     }
 
     function updateElementsOnShow() {
-        var bodyOldWidth = body.offsetWidth;
+        var bodyOldWidth = body.scrollWidth;
         body.classList.add(classes.popupOpened);
-        body.style.marginRight = (body.offsetWidth - bodyOldWidth) + "px";
+        body.style.marginRight = (body.scrollWidth - bodyOldWidth) + "px";
     }
 
     function updateElementsOnHide(timeout) {
