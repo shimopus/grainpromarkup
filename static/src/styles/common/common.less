@@ -10,6 +10,12 @@ body {
 body {
     font-size: 100%;
     .font-regular();
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &._popup-opened {
+        overflow: hidden;
+    }
 }
 
 h1,h2,h3,h4,h5 {

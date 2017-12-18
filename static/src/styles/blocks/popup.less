@@ -1,0 +1,53 @@
+.gn-popup {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(79, 79, 79, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease,
+                visibility .3s ease .3s;
+
+    &._active {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .3s ease,
+                    visibility .3s ease;
+    }
+
+    &._active &__panel {
+        transform: translate3d(0, 0, 0);
+    }
+
+    &__panel {
+        margin: auto;
+        height: 1000px;
+        position: relative;
+        width: 706px;
+        padding: 30px;
+        background: @color-popup-bg;
+        transform: translate3d(0, -200px, 0);
+        transition: transform .3s ease;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        .icon_cross;
+        background-position: center;
+        cursor: pointer;
+        .hover-default;
+    }
+}

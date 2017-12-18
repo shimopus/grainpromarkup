@@ -12,7 +12,7 @@
                 links,
                 targetTabs;
 
-            if (target.classList.contains("jsTabsLink")) {
+            if (target.classList.contains("jsTabsLink") || target.closest(".jsTabsLink")) {
                 targetTabsName = target.getAttribute('href');
                 tabs = wrapper.querySelectorAll(".jsTabsTab");
                 links = wrapper.querySelectorAll(".jsTabsLink");
