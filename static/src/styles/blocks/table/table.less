@@ -152,4 +152,53 @@
         text-align: center;
         color: #828282;
     }
+
+    &__pager {
+        display: flex;
+        justify-content: center;
+        height: 27px;
+        line-height: 27px;
+        margin: 51px 0 30px;
+        color: @color-text-faded;
+        font-weight: 700;
+
+        &-button {
+            flex: 0 0 27px;
+            cursor: pointer;
+            .hover-default;
+
+            &._prev {
+                .icon_arrow-left-blue;
+                background-position: center;
+                margin-right: 5px;
+            }
+
+            &._next {
+                .icon_arrow-right-blue;
+                background-position: center;
+                margin-left: 5px;
+            }
+        }
+
+        &-page {
+            flex: 0 0 25px;
+            padding: 0 5px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 2px;
+            background: @color-panel-primary;
+            .hover-default;
+
+            & + & {
+                margin-left: 6px;
+            }
+
+            &._active {
+                color: @color-text-inverted;
+                background: @color-button-primary-bg;
+                opacity: 1;
+                cursor: default;
+            }
+        }
+    }
 }

@@ -1,0 +1,62 @@
+.gn-textarea {
+    @height: 138px;
+    @font-size: 13px;
+
+    display: flex;
+    position: relative;
+    z-index: 1;
+    padding: 0 12px;
+    min-height: @height;
+    line-height: 20px;
+    font-size: @font-size;
+    color: @color-text-primary;
+    background: @color-text-inverted;
+
+    &__textarea {
+        overflow: hidden;
+        padding: 8px 0;
+        flex-grow: 1;
+        background: transparent;
+        margin: 0;
+        border: 0;
+        width: 0;
+        font-size: @font-size;
+        color: @color-text-primary;
+        resize: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__frame {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid @color-panel-primary;
+    }
+
+    &__textarea:focus + &__frame {
+        border-color: @color-accent-colored;
+    }
+
+    &__prefix {
+        color: @color-text-faded;
+        margin: 0 5px 0 0;
+    }
+
+    &__clear {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        line-height: 15px;
+        font-size: 12px;
+        color: @color-text-faded-2;
+        border-bottom: 1px dashed @color-text-faded-2;
+        cursor: pointer;
+        .hover-default;
+    }
+}

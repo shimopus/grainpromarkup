@@ -1,0 +1,52 @@
+.gn-simple-form {
+    padding: 35px 4px 17px 0;
+    color: @color-text-secondary;
+    font-size: 16px;
+    line-height: 20px;
+
+    &__row {
+        display: flex;
+
+        & + & {
+            margin-top: 7px;
+        }
+
+        &._actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+
+    &__label {
+        padding: 8px 10px 8px 0;
+        flex: 0 0 150px;
+    }
+
+    &__control {
+        flex: 1 1 0;
+    }
+
+    &__input {
+        .gn-input__input {
+            font-size: 16px;
+        }
+
+        .gn-input__frame {
+            border-color: @color-footer-bg;
+        }
+    }
+
+    &__textarea {
+        .gn-textarea__textarea {
+            font-size: 16px;
+        }
+
+        .gn-textarea__frame {
+            border-color: @color-footer-bg;
+        }
+    }
+
+    &__button.gn-button {
+        min-width: 240px;
+    }
+}
