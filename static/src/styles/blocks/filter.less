@@ -1,5 +1,19 @@
 .gn-filter {
 
+    &._alternate &__item {
+        &:hover {
+            background: @color-panel-primary;
+            color: @color-accent-1;
+        }
+
+        &._active {
+            background: @color-panel-primary;
+            color: @color-accent-1;
+            .font-regular;
+            .active-default;
+        }
+    }
+
     &__content {
         display: flex;
         padding: 33px @page-layout-inner-padding-right 23px @page-layout-inner-padding-left + 8px;
@@ -32,7 +46,10 @@
         background: @color-panel-primary;
         cursor: pointer;
         user-select: none;
-        .hover-default;
+
+        &:hover {
+            background: @color-footer-bg;
+        }
 
         &._active {
             background: @color-panel-secondary;

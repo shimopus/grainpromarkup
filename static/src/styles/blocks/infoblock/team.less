@@ -1,0 +1,48 @@
+.gn-infoblock-team {
+    &__content {
+        padding: 25px 120px 0 45px;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    &__header {
+        padding: 15px 0 0;
+        margin: 0 0 20px;
+        font-size: 32px;
+        line-height: 40px;
+        .font-regular;
+    }
+
+    &__list {
+        padding: 0 0 54px;
+    }
+
+    &__item {
+        display: flex;
+        font-size: 16px;
+        line-height: 20px;
+        .font-light;
+
+        & + & {
+            margin-top: 42px;
+        }
+
+        &-img {
+            margin: 0 32px 0 0;
+            .userpic(107px);
+        }
+
+        &-header {
+            margin: 0 0 -4px;
+            line-height: 30px;
+            font-size: 24px;
+            .font-regular;
+        }
+
+        &-subheader {
+            margin: 0 0 14px;
+            .font-regular;
+            color: @color-text-faded;
+        }
+    }
+}

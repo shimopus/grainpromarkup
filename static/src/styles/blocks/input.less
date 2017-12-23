@@ -12,6 +12,10 @@
     color: @color-text-primary;
     background: @color-text-inverted;
 
+    &._invalid &__frame {
+        border-color: @color-text-alert;
+    }
+
     &__input {
         flex-grow: 1;
         background: transparent;

@@ -1,0 +1,57 @@
+.gn-infoblock-contact-info {
+
+    &__content {
+        padding: 8px 0 2px 45px;
+    }
+
+    &__header {
+        font-size: 32px;
+        line-height: 40px;
+        .font-regular;
+    }
+
+    &__list {
+        padding: 26px 0;
+    }
+
+    &__item {
+        display: flex;
+        .font-light;
+        font-size: 18px;
+        line-height: 23px;
+
+        & + & {
+            margin-top: 26px;
+        }
+    }
+
+    &__img {
+        .userpic(44px);
+    }
+
+    &__name {
+        margin-left: 18px;
+        flex: 0 1 247px;
+    }
+
+    &__contacts {
+        margin-left: 13px;
+        flex: 0 1 180px;
+    }
+
+    &__assignment {
+        margin-left: 13px;
+        flex: 0 1 427px;
+    }
+
+    &__small {
+        position: relative;
+        top: 2px;
+        font-size: 15px;
+        letter-spacing: -0.025em;
+    }
+
+    &__link {
+        color: @color-text-primary;
+    }
+}

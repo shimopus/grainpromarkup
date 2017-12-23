@@ -28,6 +28,15 @@
         transform: translate3d(0, 0, 0);
     }
 
+    &._small &__panel {
+        width: 349px;
+        padding: 20px 30px;
+    }
+
+    &._gray &__panel {
+        background: @color-panel-primary;
+    }
+
     &__panel {
         margin: auto;
         position: relative;
@@ -39,8 +48,17 @@
         transition: transform .3s ease;
     }
 
+    &__header {
+        margin: 0 0 21px;
+        .font-regular;
+        font-size: 30px;
+        line-height: 38px;
+        color: @color-text-primary;
+    }
+
     &__close {
         position: absolute;
+        z-index: 2;
         top: 0;
         right: 0;
         width: 40px;
@@ -49,5 +67,65 @@
         background-position: center;
         cursor: pointer;
         .hover-default;
+    }
+
+    &__submit-info {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 30px;
+        background: @color-background-global;
+        color: @color-text-primary;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s ease .3s,
+                    opacity .3s ease;
+
+        &._gray {
+            background: @color-panel-primary;
+        }
+
+        &._vertical {
+            flex-flow: column nowrap;
+            text-align: center;
+            padding: 10px 66px 22px;
+        }
+
+        &._vertical &-img {
+            margin: 0;
+        }
+
+        &._vertical &-header {
+            margin: 10px 0 13px;
+            flex: 0 0 auto;
+        }
+
+        &._vertical &-text {
+            flex: 0 0 auto;
+        }
+
+        &-img {
+            .userpic(53px);
+            margin: 0 34px 0 0;
+        }
+
+        &-header {
+            flex: 0 0 69%;
+            font-size: 30px;
+            line-height: 38px;
+        }
+    }
+
+    &._show-submit-info &__submit-info {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility .3s ease,
+                    opacity .3s ease;
     }
 }

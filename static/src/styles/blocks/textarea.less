@@ -12,6 +12,10 @@
     color: @color-text-primary;
     background: @color-text-inverted;
 
+    &._invalid &__frame {
+        border-color: @color-text-alert;
+    }
+
     &__textarea {
         overflow: hidden;
         padding: 8px 0;

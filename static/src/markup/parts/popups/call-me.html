@@ -1,0 +1,63 @@
+<div class="gn-popup _small _gray jsPopup jsPopupCallMe" data-popup="call-me">
+
+    <div class="gn-popup__panel">
+        <span class="gn-popup__close jsPopupHide"></span>
+
+        <h2 class="gn-popup__header">Обратный звонок</h2>
+
+        <form class="gn-simple-form _no-paddings">
+            <div class="gn-simple-form__row">
+                <div class="gn-simple-form__control">
+                    <div class="gn-simple-form__control-label">телефон</div>
+
+                    <!-- base input markup-->
+                    <div class="gn-input gn-contact-panel__input">
+                        <span class="gn-input__prefix">+7</span>
+                        <input class="gn-input__input" type="text" pattern="^(\(?[0-9]{3}\)?( |)[0-9]{3}( |\-|)[0-9]{2}( |\-|)[0-9]{2})$">
+                        <div class="gn-input__frame"></div>
+                    </div>
+                    <!-- /base input markup-->
+                </div>
+            </div>
+
+            <div class="gn-simple-form__row _actions-small">
+                <div class="gn-simple-form__control">
+                    <button class="gn-simple-form__button gn-button _primary _full-width jsSubmitCallMe">
+                        Перезвоните мне
+                    </button>
+
+                    <div class="gn-simple-form__warning">
+                        Нажимая на кнопку, вы соглашаетесь с&nbsp;<a href="./privacy-policy.html">политикой конфиденциальности</a>.
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="gn-popup__submit-info _vertical _gray">
+            <div class="gn-popup__submit-info-img" style="background-image: url('../../../grain-pro/images/dude.jpg')"></div>
+            <div class="gn-popup__submit-info-header">Спасибо!</div>
+            <div class="gn-popup__submit-info-text">Мы обязательно свяжемся с вами в ближайшее время</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // stub script for submiting
+    (function() {
+        var submitBtn = document.querySelector(".jsSubmitCallMe"),
+            callMePopup = document.querySelector(".jsPopupCallMe"),
+            className = "_show-submit-info";
+
+        submitBtn.addEventListener("click", function(event) {
+            callMePopup.classList.add(className);
+            submitBtn.disabled = true;
+            setTimeout(function() {
+                callMePopup.classList.remove(className);
+                submitBtn.disabled = false;
+                GnPopup && GnPopup.hide("call-me");
+            }, 3000);
+            event.preventDefault();
+        });
+    }) ();
+</script>

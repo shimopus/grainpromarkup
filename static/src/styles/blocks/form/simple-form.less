@@ -4,6 +4,10 @@
     font-size: 16px;
     line-height: 20px;
 
+    &._no-paddings {
+        padding: 0;
+    }
+
     &__row {
         display: flex;
 
@@ -14,6 +18,10 @@
         &._actions {
             margin-top: 20px;
             text-align: center;
+
+            &-small {
+                margin-top: 15px;
+            }
         }
     }
 
@@ -24,6 +32,12 @@
 
     &__control {
         flex: 1 1 0;
+
+        &-label {
+            margin: 0 0 4px;
+            font-size: 14px;
+            color: @color-text-faded;
+        }
     }
 
     &__input {
@@ -48,5 +62,14 @@
 
     &__button.gn-button {
         min-width: 240px;
+    }
+
+    &__warning {
+        margin: 5px 0 -3px;
+        padding: 0 30px;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.02em;
+        text-align: center;
     }
 }

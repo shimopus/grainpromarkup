@@ -1,0 +1,64 @@
+.gn-journal {
+
+    &__content {
+        padding: 20px 54px 0 107px;
+    }
+
+    &__list {
+        padding: 37px 0;
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 20px;
+
+        & + & {
+            margin-top: 62px;
+        }
+
+        &-date {
+            display: block;
+            margin: 0 0 -2px;
+            font-size: 12px;
+            color: @color-text-faded;
+            .font-regular;
+        }
+
+        &-category {
+            margin: 0 0 -1px;
+            font-size: 18px;
+            color: @color-accent-1;
+            .font-regular;
+        }
+
+        &-header {
+            margin: 0 0 12px;
+            font-size: 24px;
+            line-height: 30px;
+            .font-regular;
+        }
+
+        &-header + &-text {
+            margin-top: -5px;
+        }
+
+        &-figure {
+            margin: 0 0 5px;
+        }
+
+        &-figcaption {
+            margin: -3px 0 0;
+            font-size: 12px;
+            color: @color-text-faded;
+            .font-regular;
+        }
+
+        &-img {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 100%;
+            max-height: 174px;
+        }
+    }
+
+}

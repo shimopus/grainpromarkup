@@ -15,6 +15,11 @@
     white-space: nowrap;
     user-select: none;
 
+    &[disabled] {
+        opacity: 0.5;
+        cursor: default;
+    }
+
     &._primary {
         min-width: 172px;
         padding: 0 10px;
@@ -27,6 +32,10 @@
     &._big {
         height: 40px;
         line-height: 40px;
+    }
+
+    &._full-width {
+        width: 100%;
     }
 
     &._submit {
