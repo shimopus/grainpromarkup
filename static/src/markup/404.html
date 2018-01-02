@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    @@include("./parts/head.html")
+    <title>404</title>
+</head>
+<body class="gn-page">
+@@include("./parts/header.html", {"active": ""})
+<main class="gn-page-content">
+
+    <section class="gn-404">
+        <div class="gn-page-row">
+            <div class="gn-404__inner">
+                <div class="gn-404__content">
+                    <h2 class="gn-404__header">Ошибка 404</h2>
+                    <h3 class="gn-404__subheader">Упс, страница не найдена</h3>
+                    <p class="gn-404__text">Вы попали на эту страницу по ссылке с нашего или чужого сайта? Пожалуйста, <a href="mailto:p@grain.pro">сообщите нам</a>, что произошло и мы устраним это недоразумение.</p>
+                    <p class="gn-404__text">Если вы впервые у нас, то узнать о возможностях сервиса вы можете <a href="index.html">здесь</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<section class="gn-404-bg"></section>
+@@include("./parts/footer.html")
+@@include("./parts/scripts.html")
+</body>
+</html>

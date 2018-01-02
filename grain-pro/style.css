@@ -450,6 +450,83 @@ input:focus {
 .jsRadioTabsContent._active {
   display: block;
 }
+.gn-404 {
+  height: 100%;
+}
+.gn-404__inner {
+  padding: 5vh 74px;
+  margin: 0 0 10vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.gn-404__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 400px;
+          flex: 0 0 400px;
+}
+.gn-404__header {
+  margin: 0 0 11px;
+  font-size: 72px;
+  line-height: 91px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gn-404__subheader {
+  margin: 0 0 23px;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gn-404__text {
+  font-size: 16px;
+  line-height: 23px;
+}
+.gn-404__text + .gn-404__text {
+  margin-top: 23px;
+}
+.gn-404-bg {
+  position: relative;
+}
+.gn-404-bg:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 18vw;
+  z-index: -1;
+  left: -1vw;
+  right: -1vw;
+  background: url("images/404.svg") 50% 0 no-repeat;
+  background-size: 100% auto;
+}
+.gn-404-bg + .gn-page-footer {
+  background: #F2994A;
+}
+@media screen and (max-height: 650px) {
+  .gn-404__header {
+    margin: 0 0 0;
+    font-size: 50px;
+    line-height: 60px;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .gn-404__subheader {
+    margin: 0 0 13px;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 .gn-ads__content {
   display: -webkit-box;
   display: -ms-flexbox;
