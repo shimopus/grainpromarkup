@@ -4,6 +4,7 @@
  */
 
 wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/tabs.js', array(), '07122017', true );
+wp_enqueue_script( 'callback', get_template_directory_uri() . '/js/callback.js', array('jquery'), '20012018', true );
 
 get_header(); ?>
 
@@ -157,21 +158,14 @@ get_header(); ?>
                                 <!-- base input markup-->
                                 <div class="gn-input gn-contact-panel__input">
                                     <span class="gn-input__prefix">+7</span>
-                                    <input class="gn-input__input" type="text"
+                                    <input class="gn-input__input" type="text" id="phone_number"
                                            pattern="^(\(?[0-9]{3}\)?( |)[0-9]{3}( |\-|)[0-9]{2}( |\-|)[0-9]{2})$">
                                     <div class="gn-input__frame"></div>
                                 </div>
                                 <!-- /base input markup-->
 
-                                <!-- button before -->
-                                <!--<button class="gn-contact-panel__button gn-button _primary">-->
-                                <!--Перезвоните мне-->
-                                <!--<span class="gn-button__message">Спасибо! Мы перезвоним вам в ближайшее время</span>-->
-                                <!--</button>-->
-                                <!-- /button before -->
-
                                 <!-- button after -->
-                                <button class="gn-contact-panel__button gn-button _primary _show-message" disabled>
+                                <button class="gn-contact-panel__button gn-button _primary jsCallBack">
                                     Перезвоните мне
                                     <span class="gn-button__message">Спасибо! Мы перезвоним вам в ближайшее время</span>
                                 </button>

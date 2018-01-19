@@ -142,6 +142,11 @@ function grain_pro_scripts() {
 add_action( 'wp_enqueue_scripts', 'grain_pro_scripts' );
 
 /**
+ * Implement the handling of Callback Ajax call.
+ */
+require get_template_directory() . '/ajax/callback-ajax.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
