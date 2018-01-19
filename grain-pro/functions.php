@@ -132,6 +132,8 @@ function grain_pro_scripts() {
 
     wp_enqueue_script( 'analytics', get_template_directory_uri() . '/js/analytics.js', array(), '07122017', true );
 
+    wp_enqueue_script( 'closest-polyfill', get_template_directory_uri() . '/js/closest-polyfill.js', '17012018', true );
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

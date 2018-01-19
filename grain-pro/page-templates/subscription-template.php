@@ -4,7 +4,7 @@
  */
 
 get_header(); ?>
-
+    <div class="gn-page-border"></div>
     <section class="gn-ads">
         <div class="gn-page-row">
             <div class="gn-ads__content">
