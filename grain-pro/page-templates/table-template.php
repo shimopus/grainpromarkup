@@ -61,7 +61,7 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
         <div class="gn-page-row">
             <div class="gn-filter__content">
                 <div class="gn-filter__content-inner">
-                    <span class="gn-filter__title">Объявления по продаже пшеницы</span>
+                    <span class="gn-filter__title">Объявления по <?php print $bidTypeValue == "BUY" ? "покупке" : "продаже" ?> пшеницы</span>
                     <span class="gn-filter__item _active">все классы</span>
                     <span class="gn-filter__item" data-class="1class">фураж</span>
                     <span class="gn-filter__item" data-class="withoutclass">без класса</span>

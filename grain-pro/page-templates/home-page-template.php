@@ -50,8 +50,18 @@ get_header(); ?>
                         </a>
                     </h2>
 
-                    <div class="gn-infoblock-why__button">
-                        <button class="gn-button">Посмотреть объявления</button>
+                    <div class="gn-infoblock-why__button jsTabsTab _active"
+                        data-tab="sellers"
+                        data-tab-group="why"
+                    >
+                        <a class="gn-button" href="<?php print get_field('grain-buy-page'); ?>">Посмотреть объявления</a>
+                    </div>
+
+                    <div class="gn-infoblock-why__button jsTabsTab"
+                        data-tab="buyers"
+                        data-tab-group="why"
+                    >
+                        <a class="gn-button" href="<?php print get_field('grain-sell-page'); ?>">Посмотреть объявления</a>
                     </div>
                 </div>
                 <div class="gn-infoblock-why__right">
@@ -87,11 +97,11 @@ get_header(); ?>
             <div class="gn-infoblock-distrib__content">
                 <div class="gn-infoblock-distrib__left">
                     <div class="gn-infoblock-distrib__text">
-                        Каждый <a class="gn-link-accent" href="#">понедельник</a> мы проводим рассылку актуальных объявлений по электронной почте. Это удобный способ следить за изменениями цены пшеницы на рынке и быть в курсе текущего спроса и предложения на нужный базис.
+                        Каждый <a class="gn-link-accent" href="<?php print get_field('subscribe-page'); ?>">понедельник</a> мы проводим рассылку актуальных объявлений по электронной почте. Это удобный способ следить за изменениями цены пшеницы на рынке и быть в курсе текущего спроса и предложения на нужный базис.
                     </div>
 
                     <div class="gn-infoblock-distrib__button">
-                        <button class="gn-button">Получать рассылку</button>
+                        <a class="gn-button" href="<?php print get_field('subscribe-page'); ?>">Получать рассылку</a>
                     </div>
                 </div>
                 <div class="gn-infoblock-distrib__right"></div>
@@ -112,7 +122,7 @@ get_header(); ?>
                 </ul>
 
                 <div class="gn-infoblock-advantages__button">
-                    <button class="gn-button">Подать объявление</button>
+                    <a class="gn-button" href="<?php print get_field('add-bid-page'); ?>">Подать объявление</a>
                 </div>
             </div>
         </div>
@@ -125,9 +135,11 @@ get_header(); ?>
                 </h2>
 
                 <ol class="gn-infoblock-start__list gn-list-o _row">
-                    <li class="gn-list-o__item">Посмотрите объявления о <a href="./buy.html">покупке</a> и&nbsp;<a href="./sell.html">продаже</a> пшеницы</li>
-                    <li class="gn-list-o__item"><a href="./subscribe.html">Подпишитесь</a> на рассылку объявлений на вашу почту</li>
-                    <li class="gn-list-o__item"><a href="./submit-ads.html">Разместите</a> свое объявление на сайте</li>
+                    <li class="gn-list-o__item">
+                        Посмотрите объявления о <a href="<?php print get_field('grain-buy-page'); ?>">покупке</a> и&nbsp;<a href="<?php print get_field('grain-sell-page'); ?>">продаже</a> пшеницы
+                    </li>
+                    <li class="gn-list-o__item"><a href="<?php print get_field('subscribe-page'); ?>">Подпишитесь</a> на рассылку объявлений на вашу почту</li>
+                    <li class="gn-list-o__item"><a href="<?php print get_field('add-bid-page'); ?>">Разместите</a> свое объявление на сайте</li>
                 </ol>
             </div>
         </div>
@@ -172,7 +184,7 @@ get_header(); ?>
                                 <!-- /button after -->
                             </form>
                             <div class="gn-contact-panel__warning">
-                                Нажимая на кнопку, вы соглашаетесь с <a href="./privacy-policy.html">политикой
+                                Нажимая на кнопку, вы соглашаетесь с <a href="<?php print get_field('privacy-policy-page'); ?>">политикой
                                     конфиденциальности</a>.
                             </div>
                         </div>
