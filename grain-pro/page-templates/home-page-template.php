@@ -171,13 +171,14 @@ get_header(); ?>
                                 <div class="gn-input gn-contact-panel__input">
                                     <span class="gn-input__prefix">+7</span>
                                     <input class="gn-input__input" type="text" id="phone_number"
-                                           pattern="^(\(?[0-9]{3}\)?( |)[0-9]{3}( |\-|)[0-9]{2}( |\-|)[0-9]{2})$">
+                                        pattern="\(?[0-9]{3}\)?( |)[0-9]{3}( |-|)[0-9]{2}( |-|)[0-9]{2}"
+                                        title="Формат: 9165491989 или (916) 549-19-89">
                                     <div class="gn-input__frame"></div>
                                 </div>
                                 <!-- /base input markup-->
 
                                 <!-- button after -->
-                                <button class="gn-contact-panel__button gn-button _primary jsCallBack">
+                                <button type="submit" class="gn-contact-panel__button gn-button _primary jsCallBack">
                                     Перезвоните мне
                                     <span class="gn-button__message">Спасибо! Мы перезвоним вам в ближайшее время</span>
                                 </button>

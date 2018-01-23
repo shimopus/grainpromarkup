@@ -31,24 +31,25 @@ get_header(); ?>
                 </div>
                 <form class="gn-ads__form gn-form">
                     <div class="gn-form__item">
-                        <label class="gn-form__label">электронная почта</label>
+                        <label for="email" class="gn-form__label">электронная почта</label>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
-                            <input class="gn-input__input" type="text">
+                            <input id="email" type="email" class="gn-input__input">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
                     </div>
 
                     <div class="gn-form__item _small-indent">
-                        <label class="gn-form__label">телефон</label>
+                        <label for="phone" class="gn-form__label">телефон</label>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
                             <span class="gn-input__prefix">+7</span>
-                            <input class="gn-input__input" type="text"
-                                   pattern="^(\(?[0-9]{3}\)?( |)[0-9]{3}( |\-|)[0-9]{2}( |\-|)[0-9]{2})$">
+                            <input id="phone" class="gn-input__input" type="text"
+                                   pattern="\(?[0-9]{3}\)?( |)[0-9]{3}( |-|)[0-9]{2}( |-|)[0-9]{2}"
+                                   title="Формат: 9165491989 или (916) 549-19-89">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
@@ -77,22 +78,30 @@ get_header(); ?>
                     </div>
 
                     <div class="gn-form__item">
-                        <label class="gn-form__label">ИНН собственника</label>
+                        <label for="owner_inn" class="gn-form__label">ИНН собственника</label>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
-                            <input class="gn-input__input" type="text" pattern="^([0-9]{10})$">
+                            <input id="owner_inn" class="gn-input__input" type="text"
+                                pattern="[0-9]{10,12}"
+                                minlength="10"
+                                maxlength="12"
+                                title="Должно быть от 10 до 12 цифр.">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
                     </div>
 
                     <div class="gn-form__item">
-                        <label class="gn-form__label">ИНН элеватора</label>
+                        <label for="elevator_inn" class="gn-form__label">ИНН элеватора</label>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
-                            <input class="gn-input__input" type="text" pattern="^([0-9]{10})$">
+                            <input id="elevator_inn" class="gn-input__input" type="text"
+                                pattern="[0-9]{10,12}"
+                                minlength="10"
+                                maxlength="12"
+                                title="Должно быть от 10 до 12 цифр.">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
@@ -101,22 +110,28 @@ get_header(); ?>
                     <div class="gn-form__item">
                         <div class="gn-form__row">
                             <div class="gn-form__item-inner">
-                                <label class="gn-form__label">цена, руб/т.</label>
+                                <label for="price" class="gn-form__label">цена, руб/т.</label>
 
                                 <!-- base input markup-->
                                 <div class="gn-input gn-form__input">
-                                    <input class="gn-input__input" type="text" pattern="^([0-9]+)$">
+                                    <input id="price" class="gn-input__input" type="text"
+                                        pattern="[0-9]+"
+                                        title="Использовать можно только цифры"
+                                    >
                                     <div class="gn-input__frame"></div>
                                 </div>
                                 <!-- /base input markup-->
                             </div>
 
                             <div class="gn-form__item-inner _large">
-                                <label class="gn-form__label">объем, т.</label>
+                                <label id="volume" class="gn-form__label">объем, т.</label>
 
                                 <!-- base input markup-->
                                 <div class="gn-input gn-form__input">
-                                    <input class="gn-input__input" type="text" pattern="^([0-9]+)$">
+                                    <input id="volume" class="gn-input__input" type="text"
+                                        pattern="[0-9]+"
+                                        title="Использовать можно только цифры"
+                                    >
                                     <div class="gn-input__frame"></div>
                                 </div>
                                 <!-- /base input markup-->
@@ -136,17 +151,17 @@ get_header(); ?>
 
                     <div class="gn-form__item _submit">
                         <!-- button before -->
-                        <!--<button class="gn-button _submit">-->
-                        <!--Отправить-->
-                        <!--<span class="gn-button__message">Спасибо! Мы свяжемся с вами в ближайшее время</span>-->
-                        <!--</button>-->
-                        <!-- /button before -->
-
-                        <!-- button after -->
-                        <button class="gn-button _submit _show-message" disabled>
+                        <button type="submit" class="gn-button _submit">
                             Отправить
                             <span class="gn-button__message">Спасибо! Мы свяжемся с вами в ближайшее время</span>
                         </button>
+                        <!-- /button before -->
+
+                        <!-- button after -->
+                        <!--<button class="gn-button _submit _show-message" disabled>-->
+                        <!--   Отправить-->
+                        <!--    <span class="gn-button__message">Спасибо! Мы свяжемся с вами в ближайшее время</span>-->
+                        <!--</button>-->
                         <!-- /button after -->
 
                         <div class="gn-form__message">
