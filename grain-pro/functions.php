@@ -152,6 +152,11 @@ require get_template_directory() . '/ajax/callback-ajax.php';
 require get_template_directory() . '/ajax/addBid-ajax.php';
 
 /**
+ * Implement the handling of Subscribe Ajax call.
+ */
+require get_template_directory() . '/ajax/subscribe-ajax.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

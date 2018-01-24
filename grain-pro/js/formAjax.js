@@ -1,5 +1,5 @@
 (function ($) {
-    var form = $("form.jsAddBidForm");
+    var form = $("form.jsForm");
 
     form.on("submit", function (event) {
             event.preventDefault();

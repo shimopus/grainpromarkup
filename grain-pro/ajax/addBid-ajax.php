@@ -65,7 +65,7 @@ function addBid() {
             $attachments = array($movefile['file']);
         }
 
-        wp_mail('shimopus@gmail.com', "Новая заявка" ,
+        wp_mail('subscribe@grain.pro', "Новая заявка" ,
             "Добавьте, пожалуйста, новую заявку " . $bidType .
             " на элеваторе с ИНН " . $elevatorInn .
             " по цене " . $price .
@@ -77,7 +77,9 @@ function addBid() {
             $attachments
         );
 
-     	unlink( $movefile['file'] );
+        if ($uploadedfile) {
+     	    unlink( $movefile['file'] );
+     	}
     }
 }
 

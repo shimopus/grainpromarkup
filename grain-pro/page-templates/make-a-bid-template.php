@@ -3,7 +3,7 @@
  * Template Name: Подать объявление
  */
 
-wp_enqueue_script( 'addBidAjax', get_template_directory_uri() . '/js/addBidAjax.js', array('jquery'), '23012018', true );
+wp_enqueue_script( 'formAjax', get_template_directory_uri() . '/js/formAjax.js', array('jquery'), '23012018', true );
 
 get_header(); ?>
     <div class="gn-page-border"></div>
@@ -31,7 +31,7 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <form class="gn-ads__form gn-form jsAddBidForm">
+                <form class="gn-ads__form gn-form jsForm">
                     <input type="hidden" name="action" value="add-bid" />
                     <div class="gn-form__item">
                         <label for="email" class="gn-form__label">электронная почта</label>

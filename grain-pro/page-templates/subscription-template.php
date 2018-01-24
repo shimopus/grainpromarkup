@@ -3,6 +3,9 @@
  * Template Name: Рассылка объявлений
  */
 
+wp_enqueue_script( 'radio-tabs', get_template_directory_uri() . '/js/radio-tabs.js', array(), '24012018', true );
+wp_enqueue_script( 'formAjax', get_template_directory_uri() . '/js/formAjax.js', array('jquery'), '23012018', true );
+
 get_header(); ?>
     <div class="gn-page-border"></div>
     <section class="gn-ads">
@@ -25,13 +28,14 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <form class="gn-ads__form gn-form">
+                <form class="gn-ads__form gn-form jsForm">
+                    <input type="hidden" name="action" value="subscribe" />
                     <div class="gn-form__item _negative-indent">
 
                         <div class="gn-form__radio-group">
                             <!-- base radio markup-->
                             <label class="gn-radio _big">
-                                <input name="ad-type" type="radio" class="gn-radio__input">
+                                <input name="bid-type" value="продавец и хочу получать спрос" type="radio" class="gn-radio__input">
                                 <span class="gn-radio__icon"></span>
                                 <span class="gn-radio__text">я продавец и хочу<br>получать спрос</span>
                             </label>
@@ -39,7 +43,7 @@ get_header(); ?>
 
                             <!-- base radio markup-->
                             <label class="gn-radio _big">
-                                <input name="ad-type" type="radio" class="gn-radio__input">
+                                <input name="bid-type" value="покупатель и хочу получать предложения" type="radio" class="gn-radio__input">
                                 <span class="gn-radio__icon"></span>
                                 <span class="gn-radio__text">я покупатель и хочу<br>получать предложения</span>
                             </label>
@@ -52,7 +56,7 @@ get_header(); ?>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
-                            <input class="gn-input__input" type="text">
+                            <input type="email" name="email" class="gn-input__input">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
@@ -63,7 +67,7 @@ get_header(); ?>
                         <div class="gn-form__radio-group">
                             <!-- base radio markup-->
                             <label class="gn-radio _big">
-                                <input name="station" type="radio" class="gn-radio__input jsRadioTabsTab"
+                                <input name="know-station" value="true" type="radio" class="gn-radio__input jsRadioTabsTab"
                                        data-radio-tabs="known">
                                 <span class="gn-radio__icon"></span>
                                 <span class="gn-radio__text">я знаю свою ж/д<br>станцию</span>
@@ -72,7 +76,7 @@ get_header(); ?>
 
                             <!-- base radio markup-->
                             <label class="gn-radio _big">
-                                <input name="station" type="radio" class="gn-radio__input jsRadioTabsTab"
+                                <input name="know-station" value="false" type="radio" class="gn-radio__input jsRadioTabsTab"
                                        data-radio-tabs="not known">
                                 <span class="gn-radio__icon"></span>
                                 <span class="gn-radio__text">я не знаю свою ж/д<br>станцию</span>
@@ -86,24 +90,30 @@ get_header(); ?>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
-                            <input class="gn-input__input" type="text">
+                            <input name="station" class="gn-input__input" type="text">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
 
                         <div class="gn-form__sub">
-                            <span class="gn-form__sub-link">нет вашей станции?</span>
+                            <span class="gn-form__sub-link jsPopupShow jsTabsLink"
+                                data-popup="message"
+                                data-tab="no-station"
+                                data-tab-group="message"
+                             >
+                                нет вашей станции?
+                             </span>
                         </div>
                     </div>
 
-                    <div class="gn-form__item  _medium-indent jsRadioTabsContent" data-radio-tabs="not known">
+                    <div class="gn-form__item _medium-indent jsRadioTabsContent" data-radio-tabs="not known">
                         <div class="gn-form__row">
                             <div class="gn-form__item-inner">
                                 <label class="gn-form__label">регион</label>
 
                                 <!-- base input markup-->
                                 <div class="gn-input gn-form__input">
-                                    <input class="gn-input__input" type="text">
+                                    <input name="region" class="gn-input__input" type="text">
                                     <div class="gn-input__frame"></div>
                                 </div>
                                 <!-- /base input markup-->
@@ -114,7 +124,7 @@ get_header(); ?>
 
                                 <!-- base input markup-->
                                 <div class="gn-input gn-form__input">
-                                    <input class="gn-input__input" type="text">
+                                    <input name="district" class="gn-input__input" type="text">
                                     <div class="gn-input__frame"></div>
                                 </div>
                                 <!-- /base input markup-->
@@ -127,26 +137,17 @@ get_header(); ?>
 
                         <!-- base input markup-->
                         <div class="gn-input gn-form__input">
-                            <input class="gn-input__input" type="text">
+                            <input name="locality" class="gn-input__input" type="text">
                             <div class="gn-input__frame"></div>
                         </div>
                         <!-- /base input markup-->
                     </div>
 
                     <div class="gn-form__item _submit _wide">
-                        <!-- button before -->
-                        <button class="gn-button _submit">
+                        <button type="submit" class="gn-button _submit">
                             Получать рассылку
                             <span class="gn-button__message">Спасибо! Мы свяжемся с вами в ближайшее время</span>
                         </button>
-                        <!-- /button before -->
-
-                        <!-- button after -->
-                        <!--<button class="gn-button _submit _show-message" disabled>-->
-                        <!--Получать рассылку-->
-                        <!--<span class="gn-button__message">Спасибо! Мы свяжемся с вами в ближайшее время</span>-->
-                        <!--</button>-->
-                        <!-- /button after -->
 
                         <div class="gn-form__message">
                             Нажимая на кнопку, вы соглашаетесь с <a href="<?php the_field("privacy_policy_link")?>">политикой
@@ -159,4 +160,5 @@ get_header(); ?>
     </section>
 
 <?php
+get_template_part( 'template-parts/message-popup');
 get_footer();
