@@ -8,6 +8,8 @@
  */
 
 wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array(), '19012018', true );
+wp_enqueue_script( 'feedback-form', get_template_directory_uri() . '/js/feedback-form.js', array("jquery"), '24012018', true );
+wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/tabs.js', array(), '07122017', true );
 
 ?>
 
@@ -17,11 +19,12 @@ wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array
         <span class="gn-popup__close jsPopupHide"></span>
 
         <form class="gn-simple-form">
+            <input type="hidden" name="action" value="feedback" />
             <div class="gn-simple-form__row">
                 <div class="gn-simple-form__label">
                 </div>
                 <div class="gn-simple-form__control">
-
+                    <input type="hidden" name="theme" value="" />
                     <div class="gn-simple-tabs">
                         <div class="gn-simple-tabs__link jsTabsLink _active" data-tab="no-station" data-tab-group="message">
                             Нет моей ж/д станции
@@ -65,7 +68,7 @@ wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array
 
                     <!-- base textarea markup-->
                     <div class="gn-textarea gn-simple-form__textarea">
-                        <textarea class="gn-textarea__textarea"></textarea>
+                        <textarea name="feedback" maxlength="2000" class="gn-textarea__textarea"></textarea>
                         <div class="gn-textarea__frame"></div>
                     </div>
                     <!-- /base textarea markup-->
@@ -80,8 +83,8 @@ wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array
                 <div class="gn-simple-form__control">
 
                     <!-- base input markup-->
-                    <div class="gn-input gn-simple-form__input _invalid">
-                        <input class="gn-input__input" type="text">
+                    <div class="gn-input gn-simple-form__input">
+                        <input name="email" class="gn-input__input" type="email">
                         <div class="gn-input__frame"></div>
                     </div>
                     <!-- /base input markup-->
@@ -93,7 +96,7 @@ wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array
                 <div class="gn-simple-form__label">
                 </div>
                 <div class="gn-simple-form__control">
-                    <button class="gn-simple-form__button gn-button _primary jsSubmitMessage">
+                    <button type="submit" class="gn-simple-form__button gn-button _primary jsSubmitMessage">
                         Отправить сообщение
                     </button>
                 </div>
@@ -107,23 +110,3 @@ wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array
     </div>
 
 </div>
-
-<script>
-    // stub script for submiting
-    (function() {
-        var submitBtn = document.querySelector(".jsSubmitMessage"),
-            messagePopup = document.querySelector(".jsPopupMessage"),
-            className = "_show-submit-info";
-
-        submitBtn.addEventListener("click", function(event) {
-            messagePopup.classList.add(className);
-            submitBtn.disabled = true;
-            setTimeout(function() {
-                messagePopup.classList.remove(className);
-                submitBtn.disabled = false;
-                GnPopup && GnPopup.hide("message");
-            }, 3000);
-            event.preventDefault();
-        });
-    }) ();
-</script>
