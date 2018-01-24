@@ -21,7 +21,7 @@ function subscribe() {
                 "районе " . $district . ", населенном пункте " . $locality . ".";
         }
 
-        wp_mail('shimopus@gmail.com', "Новая подписка на рассылку", $body);
+        wp_mail('subscribe@grain.pro', "Новая подписка на рассылку", $body);
     }
 }
 
