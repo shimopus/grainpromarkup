@@ -132,9 +132,16 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                         </div>
 
                         <div class="gn-table-aside__links">
-                            <a class="gn-table-aside__link" href="#">Остались вопросы по таблице?</a>
-                            <a class="gn-table-aside__link" href="#">Некорректная информация в объявлении?</a>
-                            <a class="gn-table-aside__link" href="#">Источники<br>информации</a>
+                            <a class="gn-table-aside__link" href="<?php the_field('faq_link')?>">Остались вопросы по таблице?</a>
+                            <a class="gn-table-aside__link jsPopupShow jsTabsLink"
+                                data-popup="message"
+                                data-tab="problem"
+                                data-tab-group="message"
+                                href="#"
+                            >
+                                Некорректная информация в объявлении?
+                            </a>
+                            <a class="gn-table-aside__link" href="<?php the_field('faq_link')?>">Источники<br>информации</a>
                         </div>
 
                     </aside>
