@@ -142,15 +142,13 @@ get_header(); ?>
                         </div>
                     </div>
 
-                    <div class="gn-form__item _medium-indent">
-                        <!-- base file markup-->
+                    <!-- <div class="gn-form__item _medium-indent">
                         <label class="gn-file gn-form__file">
                             <input name="attachmentFile" class="gn-file__input" type="file" accept=".jpg, .jpeg, .png, .pdf">
                             <div class="gn-file__label">Загрузите карту анализа PDF или JPG файл</div>
                             <div class="gn-file__button">Выбрать файл</div>
                         </label>
-                        <!-- /base file markup-->
-                    </div>
+                    </div> -->
 
                     <div class="gn-form__item _submit">
                         <!-- button before -->
