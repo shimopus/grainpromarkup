@@ -82,12 +82,12 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                     <img src="<?php print get_template_directory_uri() . '/images/Magnify.svg' ?>" alt="Загрузка..." class="gn-loader _hidden"/>
                     <div class="jsTableError _hidden">Что-то пошло не так :(. Сообщите нам об этом, пожалуйста, любым удобным способом связи, указанным на сайте.</div>
                     <?php print $tableHTML ?>
-                    <div class="gn-table__pager">
+                    <!-- <div class="gn-table__pager">
                         <span class="gn-table__pager-button _prev"></span>
                         <span class="gn-table__pager-page _active">1</span>
                         <span class="gn-table__pager-page">2</span>
                         <span class="gn-table__pager-button _next"></span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="gn-table-layout__content-aside">
                     <aside class="gn-table-aside">

@@ -8,7 +8,7 @@ function feedback() {
     if (!$email) {
         exit();
     } else {
-        wp_mail('shimopus@gmail.com', "Новый запрос с темой '" . $theme . "'" ,
+        wp_mail('subscribe@grain.pro', "Новый запрос с темой '" . $theme . "'" ,
             "Мой email " . $email . ". \r\n" .
             "Мое сообщение: '" . $feedback . "'");
     }
