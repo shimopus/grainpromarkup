@@ -161,6 +161,13 @@ require get_template_directory() . '/ajax/subscribe-ajax.php';
  */
 require get_template_directory() . '/ajax/feedback-ajax.php';
 
+
+/**
+ * Implement of the mail configuration.
+ */
+require get_template_directory() . '/config/mail-config.php';
+
+
 /**
  * Implement the Custom Header feature.
  */
