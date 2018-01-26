@@ -30,15 +30,6 @@
 
                 activateYaMetrica();
                 filterTableByClass(filterClass);
-
-                if (currentCarouselId) {
-                    $("#" + currentCarouselId).click();
-                    currentCarouselId = null;
-                }
-                if (currentCardId) {
-                    $("#" + currentCardId).click();
-                    currentCardId = null;
-                }
             })
             .fail(function () {
                 imgLoader.toggleClass(hiddenClass);
@@ -109,6 +100,15 @@
             $(window).load(function () {
                 fireAnalyticsEvent("TARGET_FROM_EMAIL_BUY");
             });
+        }
+
+        if (currentCarouselId) {
+            $("#" + currentCarouselId).click();
+            currentCarouselId = null;
+        }
+        if (currentCardId) {
+            $("#" + currentCardId).click();
+            currentCardId = null;
         }
     });
 
