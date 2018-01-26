@@ -4,7 +4,7 @@
  */
 
 $faqCategories = get_categories(array (
-    'parent' => 10 //Вопросы-ответы
+    'parent' => 7 //Вопросы-ответы
 ));
 
 wp_enqueue_script( 'q_and_a', get_template_directory_uri() . '/js/q_and_a.js', array(), '07122017', true );
