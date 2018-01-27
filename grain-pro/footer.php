@@ -12,9 +12,11 @@
 ?>
 
 	</main><!-- #content -->
+
     <?php if (is_404()) {
         print "<section class=\"gn-404-bg\"></section>";
     } ?>
+
 	<footer class="gn-page-footer gn-footer">
 		<div class="gn-page-row">
 			<div class="gn-footer__inner">

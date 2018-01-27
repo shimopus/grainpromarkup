@@ -19,8 +19,8 @@ get_header(); ?>
                         <a href="" class="jsPopupShow jsTabsLink"
                            data-popup="message"
                            data-tab="problem"
-                           data-tab-group="message">сообщите нам</a>
-                        , что произошло и мы устраним это недоразумение.</p>
+                           data-tab-group="message">сообщите нам</a>, что произошло и мы устраним это недоразумение.
+                    </p>
                     <p class="gn-404__text">Если вы впервые у нас, то узнать о возможностях сервиса вы можете <a href="/">здесь</a>.</p>
                 </div>
             </div>
