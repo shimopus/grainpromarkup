@@ -104,7 +104,7 @@ wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/tabs.js', array()
         </form>
 
         <div class="gn-popup__submit-info">
-            <div class="gn-popup__submit-info-img" style="background-image: url('../../../grain-pro/images/dude.jpg')"></div>
+            <div class="gn-popup__submit-info-img" style="background-image: url(<?php print get_template_directory_uri() . '/images/dude.jpg' ?>)"></div>
             <div class="gn-popup__submit-info-header">Спасибо за ваше сообщение! Мы ответим вам в ближайшее время</div>
         </div>
     </div>
