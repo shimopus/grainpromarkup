@@ -32,7 +32,7 @@ foreach ($faqCategories as $cat) : $subCategories = get_categories(array(
 )) ?>
     <section class="gn-faq">
         <div class="gn-page-row">
-            <div class="gn-faq__content jsFAQContent" id="<?php print $cat->cat_ID; ?>">
+            <div class="gn-faq__content jsFAQContent _hidden" id="<?php print $cat->cat_ID; ?>">
                 <h2 class="gn-faq__header">Вопрос-ответ</h2>
                 <?php foreach ($subCategories as $subCat) : ?>
                 <div class="gn-faq__section">
