@@ -132,12 +132,41 @@ function grain_pro_scripts() {
 
     wp_enqueue_script( 'analytics', get_template_directory_uri() . '/js/analytics.js', array(), '07122017', true );
 
+    wp_enqueue_script( 'closest-polyfill', get_template_directory_uri() . '/js/closest-polyfill.js', '17012018', true );
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
 add_action( 'wp_enqueue_scripts', 'grain_pro_scripts' );
+
+/**
+ * Implement the handling of Callback Ajax call.
+ */
+require get_template_directory() . '/ajax/callback-ajax.php';
+
+/**
+ * Implement the handling of Add Bid Ajax call.
+ */
+require get_template_directory() . '/ajax/addBid-ajax.php';
+
+/**
+ * Implement the handling of Subscribe Ajax call.
+ */
+require get_template_directory() . '/ajax/subscribe-ajax.php';
+
+/**
+ * Implement the handling of Feedback Form Ajax call.
+ */
+require get_template_directory() . '/ajax/feedback-ajax.php';
+
+
+/**
+ * Implement of the mail configuration.
+ */
+require get_template_directory() . '/config/mail-config.php';
+
 
 /**
  * Implement the Custom Header feature.

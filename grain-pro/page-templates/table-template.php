@@ -13,6 +13,7 @@ wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui-1.
 
 wp_enqueue_script( 'table', get_template_directory_uri() . '/js/table.js', array('jquery', 'jquery-ui'), '14122017', true );
 wp_enqueue_script( 'toggle', get_template_directory_uri() . '/js/toggle.js', array(), '07122017', true );
+wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/tabs.js', array(), '07122017', true );
 
 get_header();
 
@@ -43,7 +44,13 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 
                 </div>
                 <div class="gn-station__content-aside">
-                    <a href="#" class="gn-station__link">нет вашей станции?</a>
+                    <a href="#" class="gn-station__link jsPopupShow jsTabsLink"
+                       data-popup="message"
+                       data-tab="no-station"
+                       data-tab-group="message"
+                    >
+                        нет вашей станции?
+                    </a>
                 </div>
             </div>
 
@@ -54,7 +61,7 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
         <div class="gn-page-row">
             <div class="gn-filter__content">
                 <div class="gn-filter__content-inner">
-                    <span class="gn-filter__title">Объявления по продаже пшеницы</span>
+                    <span class="gn-filter__title">Объявления по <?php print $bidTypeValue == "BUY" ? "покупке" : "продаже" ?> пшеницы</span>
                     <span class="gn-filter__item _active">все классы</span>
                     <span class="gn-filter__item" data-class="1class">фураж</span>
                     <span class="gn-filter__item" data-class="withoutclass">без класса</span>
@@ -75,6 +82,12 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                     <img src="<?php print get_template_directory_uri() . '/images/Magnify.svg' ?>" alt="Загрузка..." class="gn-loader _hidden"/>
                     <div class="jsTableError _hidden">Что-то пошло не так :(. Сообщите нам об этом, пожалуйста, любым удобным способом связи, указанным на сайте.</div>
                     <?php print $tableHTML ?>
+                    <!-- <div class="gn-table__pager">
+                        <span class="gn-table__pager-button _prev"></span>
+                        <span class="gn-table__pager-page _active">1</span>
+                        <span class="gn-table__pager-page">2</span>
+                        <span class="gn-table__pager-button _next"></span>
+                    </div> -->
                 </div>
                 <div class="gn-table-layout__content-aside">
                     <aside class="gn-table-aside">
@@ -119,15 +132,24 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                         </div>
 
                         <div class="gn-table-aside__links">
-                            <a class="gn-table-aside__link" href="#">Остались вопросы по таблице?</a>
-                            <a class="gn-table-aside__link" href="#">Некорректная информация в объявлении?</a>
-                            <a class="gn-table-aside__link" href="#">Источники<br>информации</a>
+                            <a class="gn-table-aside__link" href="<?php the_field('faq_link')?>">Остались вопросы по таблице?</a>
+                            <a class="gn-table-aside__link jsPopupShow jsTabsLink"
+                                data-popup="message"
+                                data-tab="problem"
+                                data-tab-group="message"
+                                href="#"
+                            >
+                                Некорректная информация в объявлении?
+                            </a>
+                            <a class="gn-table-aside__link" href="<?php the_field('faq_link')?>">Источники<br>информации</a>
                         </div>
 
                     </aside>
                 </div>
             </div>
         </div>
+    </section>
+    <section class="gn-page-subsection">
         <section class="gn-not-found">
             <div class="gn-page-row">
                 <div class="gn-not-found__content">
@@ -139,13 +161,19 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                         <div class="gn-not-found__text">
                             Напишите, что нужно добавить, и мы найдем это для вас
                         </div>
-                        <button class="gn-not-found__button gn-button _primary _big">Написать в Grain.pro</button>
+                        <button class="gn-not-found__button gn-button _primary _big jsPopupShow jsTabsLink"
+                                data-popup="message"
+                                data-tab="not-found"
+                                data-tab-group="message"
+                        >
+                            Написать в Grain.pro
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
     </section>
-
 <?php
+get_template_part( 'template-parts/message-popup');
 get_footer();
 
