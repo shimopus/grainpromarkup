@@ -4,23 +4,25 @@
     @@include("./parts/head.html")
     <title>Политика конфиденциальности</title>
 </head>
-<body class="gn-page">
-    @@include("./parts/header.html", {"active": "privacy-policy"})
-    <main class="gn-page-content">
+<body>
+    <div class="gn-page">
+        @@include("./parts/header.html", {"active": "privacy-policy"})
+        <main class="gn-page-content">
 
-        <div class="gn-page-border"></div>
-        @@include("./parts/faq.html")
+            <div class="gn-page-border"></div>
+            @@include("./parts/faq.html")
 
-    </main>
-    <section class="gn-page-subsection">
-        @@include("./parts/not-found.html", {
-            "header": "Не нашли свой вопрос?",
-            "tab": "question",
-            "text": "Задайте его нам при помощи формы обратной связи или напишите на почту p@grain.pro"
-        })
-    </section>
-    @@include("./parts/popups/message.html")
-    @@include("./parts/footer.html")
-    @@include("./parts/scripts.html")
+        </main>
+        <section class="gn-page-subsection">
+            @@include("./parts/not-found.html", {
+                "header": "Не нашли свой вопрос?",
+                "tab": "question",
+                "text": "Задайте его нам при помощи формы обратной связи или напишите на почту p@grain.pro"
+            })
+        </section>
+        @@include("./parts/popups/message.html")
+        @@include("./parts/footer.html")
+        @@include("./parts/scripts.html")
+    </div>
 </body>
 </html>

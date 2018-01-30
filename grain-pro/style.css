@@ -1875,6 +1875,7 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 .gn-page-content {
   -webkit-box-flex: 1;

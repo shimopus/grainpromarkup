@@ -4,22 +4,24 @@
     @@include("./parts/head.html")
     <title>Grain.pro</title>
 </head>
-<body class="gn-page">
-    @@include("./parts/header.html", {"active": ""})
-    <main class="gn-page-content">
+<body>
+    <div class="gn-page">
+        @@include("./parts/header.html", {"active": ""})
+        <main class="gn-page-content">
 
-        @@include("./parts/infoblock/time.html")
-        @@include("./parts/infoblock/why.html")
-        @@include("./parts/infoblock/distrib.html")
-        @@include("./parts/infoblock/advantages.html")
-        @@include("./parts/infoblock/start.html")
+            @@include("./parts/infoblock/time.html")
+            @@include("./parts/infoblock/why.html")
+            @@include("./parts/infoblock/distrib.html")
+            @@include("./parts/infoblock/advantages.html")
+            @@include("./parts/infoblock/start.html")
 
-    </main>
-    <section class="gn-page-subsection">
-        @@include("./parts/contact-panel.html")
-    </section>
-    @@include("./parts/footer.html")
+        </main>
+        <section class="gn-page-subsection">
+            @@include("./parts/contact-panel.html")
+        </section>
+        @@include("./parts/footer.html")
 
-    @@include("./parts/scripts.html")
+        @@include("./parts/scripts.html")
+    </div>
 </body>
 </html>

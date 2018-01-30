@@ -4,20 +4,22 @@
     @@include("./parts/head.html")
     <title>О нас</title>
 </head>
-<body class="gn-page">
-    @@include("./parts/header.html", {"active": "about"})
-    <main class="gn-page-content">
+<body>
+    <div class="gn-page">
+        @@include("./parts/header.html", {"active": "about"})
+        <main class="gn-page-content">
 
-        @@include("./parts/infoblock/mission.html")
-        @@include("./parts/infoblock/contact-ways.html")
-        @@include("./parts/infoblock/contact-info.html")
-        @@include("./parts/infoblock/company.html")
-        @@include("./parts/infoblock/team.html")
+            @@include("./parts/infoblock/mission.html")
+            @@include("./parts/infoblock/contact-ways.html")
+            @@include("./parts/infoblock/contact-info.html")
+            @@include("./parts/infoblock/company.html")
+            @@include("./parts/infoblock/team.html")
 
-    </main>
-    @@include("./parts/popups/call-me.html")
-    @@include("./parts/popups/message.html")
-    @@include("./parts/footer.html")
-    @@include("./parts/scripts.html")
+        </main>
+        @@include("./parts/popups/call-me.html")
+        @@include("./parts/popups/message.html")
+        @@include("./parts/footer.html")
+        @@include("./parts/scripts.html")
+    </div>
 </body>
 </html>
