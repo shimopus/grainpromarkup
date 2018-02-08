@@ -86,7 +86,7 @@
     function activateYaMetrica() {
         $("[data-fancybox][data-type='image']").on('click', function () {
             var image = $(this);
-            fireAnalyticsEvent("TARGET_DOWNLOAD_BUY", {
+            fireAnalyticsEvent("TARGET_DOWNLOAD_" + $bidType, {
                 params: {
                     qualityPassport: image.attr("data-src").split("/").pop()
                 }
@@ -95,13 +95,13 @@
 
         $("[data-fancybox][data-src^='#']").on('click', function () {
             var partner = $(this);
-            fireAnalyticsEvent("TARGET_PARTNER_BUY", {
+            fireAnalyticsEvent("TARGET_PARTNER_" + $bidType, {
                 partner: partner.text()
             });
         });
 
         $("input.jsStationsAutocomplete").on("autocompleteselect", function (event, ui) {
-            fireAnalyticsEvent("TARGET_STATION_BUY", {
+            fireAnalyticsEvent("TARGET_STATION_" + $bidType, {
                 station: ui.item.label + "(" + ui.item.value + ")"
             });
         });
@@ -114,7 +114,13 @@
     $(document).ready(function () {
         if (param("from") === "email") {
             $(window).load(function () {
-                fireAnalyticsEvent("TARGET_FROM_EMAIL_BUY");
+                fireAnalyticsEvent("TARGET_FROM_EMAIL_" + $bidType);
+            });
+        }
+
+        if (param("from") === "file") {
+            $(window).load(function () {
+                fireAnalyticsEvent("TARGET_FROM_FILE_" + $bidType);
             });
         }
 
