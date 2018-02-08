@@ -40,7 +40,9 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 
                     <!-- base input markup-->
                     <div class="gn-input gn-station__input">
-                        <input class="gn-input__input jsStationsAutocomplete" type="text" placeholder="код или название станции">
+                        <input class="gn-input__input jsStationsAutocomplete" type="text" placeholder="код или название станции"
+                            value="<?php print ($calculateForStationCode ? $calculateForStationCode : "") ?>"
+                        >
                         <div class="gn-input__frame"></div>
                         <span class="gn-input__clear">очистить</span>
                     </div>
