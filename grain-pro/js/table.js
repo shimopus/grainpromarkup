@@ -59,6 +59,22 @@
             stationSelector.val("");
             reloadTable();
         });
+
+        var currentValue = stationSelector.val();
+
+        //if selector had a value (user comes on the page with the parameter "code"
+        // we need to change it based on the suggestions.
+        if (currentValue) {
+            $.getJSON("https://grainpro.herokuapp.com/api/_search/stations", {
+                query: currentValue
+            }, function (data) {
+                if (data && data.length && data.length == 1) {
+                    stationSelector.val(data[0].name);
+                } else {
+                    stationSelector.val("");
+                }
+            });
+        }
     }
 
     function modifyData(data) {

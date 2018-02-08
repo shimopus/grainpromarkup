@@ -20,7 +20,11 @@ get_header();
 $bidTypeField = get_field_object('bids_type');
 $bidTypeValue = $bidTypeField['value'];
 
-$api_request = "https://grainpro.herokuapp.com/pages/market-table/site?bidType=".$bidTypeValue."&v=2";
+$calculateForStationCode = filter_input(INPUT_GET, 'code', FILTER_SANITIZE_NUMBER_INT);
+$api_request = "https://grainpro.herokuapp.com/pages/market-table/site?"
+    ."bidType=".$bidTypeValue
+    .($calculateForStationCode ? "&code=".$calculateForStationCode : "")
+    ."&v=2";
 
 $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 ?>
@@ -36,7 +40,9 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 
                     <!-- base input markup-->
                     <div class="gn-input gn-station__input">
-                        <input class="gn-input__input jsStationsAutocomplete" type="text" placeholder="код или название станции">
+                        <input class="gn-input__input jsStationsAutocomplete" type="text" placeholder="код или название станции"
+                            value="<?php print ($calculateForStationCode ? $calculateForStationCode : "") ?>"
+                        >
                         <div class="gn-input__frame"></div>
                         <span class="gn-input__clear">очистить</span>
                     </div>
