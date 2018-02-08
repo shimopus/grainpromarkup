@@ -20,7 +20,11 @@ get_header();
 $bidTypeField = get_field_object('bids_type');
 $bidTypeValue = $bidTypeField['value'];
 
-$api_request = "https://grainpro.herokuapp.com/pages/market-table/site?bidType=".$bidTypeValue."&v=2";
+$calculateForStationCode = filter_input(INPUT_GET, 'code', FILTER_SANITIZE_NUMBER_INT);
+$api_request = "https://grainpro.herokuapp.com/pages/market-table/site?"
+    ."bidType=".$bidTypeValue
+    .($calculateForStationCode ? "&code=".$calculateForStationCode : "")
+    ."&v=2";
 
 $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 ?>
