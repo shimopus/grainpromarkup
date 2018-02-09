@@ -1,6 +1,6 @@
 (function ($, undefined) {
     var imgLoader = $("img.gn-loader"),
-        tableError = $("jsTableError"),
+        tableError = $(".jsTableError"),
         hiddenClass = hiddenClass;
 
     activateYaMetrica();
