@@ -1096,8 +1096,8 @@ input:focus {
 }
 .gn-simple-form__control {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
 }
 .gn-simple-form__control-label {
   margin: 0 0 4px;
@@ -2037,16 +2037,12 @@ input:focus {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: fixed;
   z-index: 500;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 50px 0;
   overflow-x: hidden;
   overflow-y: auto;
   background: rgba(79, 79, 79, 0.6);
@@ -2076,8 +2072,11 @@ input:focus {
 .gn-popup._gray .gn-popup__panel {
   background: #F2F2F2;
 }
-.gn-popup__panel {
+.gn-popup__wrapper {
+  padding: 50px 0;
   margin: auto;
+}
+.gn-popup__panel {
   position: relative;
   width: 706px;
   padding: 16px;
@@ -2299,6 +2298,9 @@ input:focus {
   font-size: 18px;
   color: #F2994A;
   white-space: nowrap;
+}
+.gn-station__text {
+  margin-right: 20px;
 }
 .gn-station__content {
   display: -webkit-box;
