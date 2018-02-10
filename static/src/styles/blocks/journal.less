@@ -1,5 +1,24 @@
 .gn-journal {
 
+    &__author {
+        padding: 14px 0;
+        margin: 0 0 10px;
+        display: flex;
+        align-items: center;
+
+        &-userpic {
+            margin: 0 10px 0 0;
+            .userpic(44px);
+            flex: 0 0 auto;
+        }
+
+        &-info {
+            color: @color-text-faded;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
     &__content {
         padding: 20px 54px 0 107px;
     }
@@ -11,6 +30,10 @@
     &__item {
         font-size: 16px;
         line-height: 20px;
+
+        &._full {
+            margin: 0 67px 122px 0;
+        }
 
         & + & {
             margin-top: 62px;
@@ -31,6 +54,7 @@
             .font-regular;
         }
 
+        &-wysiwyg h3,
         &-header {
             margin: 0 0 12px;
             font-size: 24px;
@@ -38,14 +62,44 @@
             .font-regular;
         }
 
+        &-wysiwyg h3 + p,
         &-header + &-text {
             margin-top: -5px;
         }
 
+        &-wysiwyg h4 {
+            margin: 0 0 -1px;
+            color: @color-text-faded;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+
+        &-wysiwyg p + h4,
+        &-wysiwyg p + p {
+            margin-top: 20px;
+        }
+
+        &-wysiwyg figure,
         &-figure {
             margin: 0 0 5px;
         }
 
+        &-wysiwyg p + figure {
+            margin-top: 5px;
+        }
+
+        &-wysiwyg figure._big-margin {
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+
+        &-wysiwyg figure._float-left {
+            float: left;
+            margin: 5px 18px 5px 0;
+        }
+
+        &-wysiwyg figcaption,
         &-figcaption {
             margin: -3px 0 0;
             font-size: 12px;
@@ -53,11 +107,35 @@
             .font-regular;
         }
 
+        &-wysiwyg img,
         &-img {
             display: inline-block;
             vertical-align: top;
             max-width: 100%;
             max-height: 174px;
+        }
+    }
+
+    &__nav {
+        margin: 0 0 31px;
+        display: flex;
+        justify-content: space-between;
+
+        &-link {
+            font-size: 13px;
+            .hover-default;
+
+            &._prev {
+                padding-left: 18px;
+                .icon_arrow-left-blue;
+                background-position: 0 50%;
+            }
+
+            &._next {
+                padding-right: 18px;
+                .icon_arrow-right-blue;
+                background-position: 100% 50%;
+            }
         }
     }
 

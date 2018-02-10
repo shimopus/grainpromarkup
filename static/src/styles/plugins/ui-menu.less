@@ -1,0 +1,38 @@
+.ui-menu {
+    &.ui-widget.ui-widget-content {
+        border: 0;
+    }
+
+    & &-item {
+        margin: -1px -12px;
+        background: @color-background-global;
+        border-left: 1px solid @color-accent-colored;
+        border-right: 1px solid @color-accent-colored;
+
+        &-wrapper {
+            padding: 5px 11px 6px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &:first-child {
+            border-top: 1px solid @color-accent-colored;
+            padding-top: 6px;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid @color-accent-colored;
+            padding-bottom: 6px;
+        }
+    }
+
+    & .ui-state-active,
+    &.ui-widget-content .ui-state-active {
+        border: 0;
+    }
+
+    & .ui-state-focus,
+    & .ui-state-active {
+        margin: 0;
+    }
+}
