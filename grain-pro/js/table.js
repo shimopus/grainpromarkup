@@ -112,7 +112,7 @@
     }
 
     $(document).ready(function () {
-        if (param("from") === "email") {
+        /*if (param("from") === "email") {
             $(window).load(function () {
                 fireAnalyticsEvent("TARGET_FROM_EMAIL_" + $bidType);
             });
@@ -122,7 +122,7 @@
             $(window).load(function () {
                 fireAnalyticsEvent("TARGET_FROM_FILE_" + $bidType);
             });
-        }
+        }*/
 
         if (currentCarouselId) {
             $("#" + currentCarouselId).click();
