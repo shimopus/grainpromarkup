@@ -25,9 +25,14 @@
     &__link {
         display: block;
         padding: 0 0 9px;
-        color: @color-text-primary;
         border-bottom: 4px solid transparent;
         user-select: none;
+
+        &,
+        &:hover,
+        &:active {
+            color: @color-text-primary;
+        }
 
         &,
         &:hover {
@@ -41,6 +46,10 @@
 
         & + & {
             margin-left: 40px;
+        }
+
+        &._no-border {
+            border-bottom-color: transparent;
         }
     }
 

@@ -12,17 +12,13 @@
     color: @color-text-primary;
     background: @color-text-inverted;
 
-    &._invalid &__frame {
-        border-color: @color-text-alert;
-    }
-
     &__input {
         flex-grow: 1;
         background: transparent;
         margin: 0;
         border: 0;
         height: @height;
-        width: 0;
+        //width: 0;
         font-size: @font-size;
         color: @color-text-primary;
     }
@@ -39,6 +35,11 @@
 
     &__input:focus + &__frame {
         border-color: @color-accent-colored;
+    }
+
+    &__input:invalid + &__frame,
+    &._invalid &__frame {
+        border-color: @color-text-alert;
     }
 
     &__prefix {

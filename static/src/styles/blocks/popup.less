@@ -1,14 +1,12 @@
 .gn-popup {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
     position: fixed;
     z-index: 500;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 50px 0;
     overflow-x: hidden;
     overflow-y: auto;
     background: rgba(79, 79, 79, 0.6);
@@ -37,8 +35,12 @@
         background: @color-panel-primary;
     }
 
-    &__panel {
+    &__wrapper {
+        padding: 50px 0;
         margin: auto;
+    }
+
+    &__panel {
         position: relative;
         width: 706px;
         padding: 16px;

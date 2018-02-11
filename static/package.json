@@ -15,6 +15,7 @@
     "babel-preset-env": "^1.5.2",
     "browser-sync": "^2.14.0",
     "datauri.template": "0.0.1",
+    "fs-path": "0.0.23",
     "gulp-autoprefixer": "~2.3.1",
     "gulp-concat": "~2.6.0",
     "gulp-file-include": "^1.1.0",
@@ -24,12 +25,14 @@
     "gulp-load-plugins": "~1.2.4",
     "gulp-plumber": "~1.1.0",
     "gulp-rimraf": "^0.2.1",
-    "gulp-sourcemaps": "~1.6.0"
+    "gulp-sourcemaps": "~1.6.0",
+    "juice": "^4.2.2"
   },
   "scripts": {
     "serve": "gulp",
     "build": "gulp build",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "email": "node create-email"
   },
   "dependencies": {
     "cloneable-readable": "^1.0.0",
