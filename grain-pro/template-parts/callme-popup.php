@@ -46,7 +46,7 @@ wp_enqueue_script('tabs', get_template_directory_uri() . '/js/tabs.js', array(),
                         </button>
 
                         <div class="gn-simple-form__warning">
-                            Нажимая на кнопку, вы соглашаетесь с&nbsp;<a href="./privacy-policy.html">политикой конфиденциальности</a>.
+                            Нажимая на кнопку, вы соглашаетесь с&nbsp;<a href="./privacy-policy">политикой конфиденциальности</a>.
                         </div>
                     </div>
                 </div>
