@@ -66,8 +66,8 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
     <section class="gn-filter">
         <div class="gn-page-row">
             <div class="gn-filter__content">
+                <h3 class="gn-filter__title">Объявления по <?php print $bidTypeValue == "BUY" ? "покупке" : "продаже" ?> пшеницы</h3>
                 <div class="gn-filter__content-inner">
-                    <span class="gn-filter__title">Объявления по <?php print $bidTypeValue == "BUY" ? "покупке" : "продаже" ?> пшеницы</span>
                     <span class="gn-filter__item _active">все классы</span>
                     <span class="gn-filter__item" data-class="1class">фураж</span>
                     <span class="gn-filter__item" data-class="withoutclass">без класса</span>
@@ -85,6 +85,12 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
 
             <div class="gn-table-layout__content">
                 <div class="gn-table-layout__content-main jsTableContent">
+
+                    <div class="gn-message" style="display: none;">
+                        <span class="gn-message__title">Внимание!</span> При расчете цены с доставкой использованы цены Русагротранс за 2017 год. Переход на цены 2018
+                        года планируется в ближайшее время.
+                    </div>
+
                     <img src="<?php print get_template_directory_uri() . '/images/Magnify.svg' ?>" alt="Загрузка..." class="gn-loader _hidden"/>
                     <div class="jsTableError _hidden">Что-то пошло не так :(. Сообщите нам об этом, пожалуйста, любым удобным способом связи, указанным на сайте.</div>
                     <?php print $tableHTML ?>

@@ -14,9 +14,10 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	
-	<?php wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&amp;subset=cyrillic', false ); ?>
+	<meta name="viewport" content="width=1024, initial-scale=maximum-scale">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <?php wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&amp;subset=cyrillic', false ); ?>
 	
 	<?php wp_head(); ?>
 </head>
@@ -42,7 +43,7 @@
                 <div class="gn-header__contacts">
                     <a href="skype:+79165491989?call" class="gn-header__contacts-phone">+7 (916) 549-19-89</a>
                     <div class="gn-header__contacts-time">с 5:00 до 19:00 по МСК</div>
-                    <a href="mailto:p@grain.pro" class="gn-header__link">p@grain.pro</a>
+                    <a href="mailto:p@grain.pro" class="gn-header__link _no-border">p@grain.pro</a>
                 </div>
             </div><!-- .site-branding -->
         </header><!-- #masthead -->

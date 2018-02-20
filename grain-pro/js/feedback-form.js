@@ -1,23 +1,25 @@
 (function ($) {
     var form = $(".jsPopupMessage form");
-    var messagePopup = document.querySelector(".jsPopupMessage"),
-        className = "_show-submit-info",
-        submitBtn = document.querySelector(".jsSubmitMessage");
 
     form.on("submit", function (event) {
         event.preventDefault();
-        submitBtn.disabled = true;
+
+        var submitBtn = $(this).find(".jsSubmitMessage"),
+        messagePopup = submitBtn.closest(".jsPopupMessage"),
+        className = "_show-submit-info";
+
+        submitBtn.prop("disabled", true);
 
         $("input[name=theme]").val($("div.jsTabsLink._active").text());
 
         $.post("/wp-admin/admin-ajax.php", form.serialize())
             .done(function () {
-                messagePopup.classList.add(className);
+                messagePopup.addClass(className);
 
                 setTimeout(function() {
-                    messagePopup.classList.remove(className);
-                    submitBtn.disabled = false;
-                    GnPopup && GnPopup.hide("message");
+                    messagePopup.removeClass(className);
+                    submitBtn.prop("disabled", false);
+                    GnPopup && GnPopup.hide(messagePopup.data("popup"));
                 }, 3000);
             });
     });

@@ -112,7 +112,7 @@ get_header(); ?>
         <div class="gn-page-row">
             <div class="gn-infoblock-advantages__content">
                 <h2 class="gn-infoblock-advantages__header">
-                    Почему стоит разместить объявление на GRAIN.PRO
+                    Почему стоит разместить объявление на Grain.pro
                 </h2>
 
                 <ul class="gn-infoblock-advantages__list gn-list-u _big-indent">
@@ -164,7 +164,9 @@ get_header(); ?>
                             </div>
                         </div>
                         <div class="gn-contact-panel__right">
-                            или оставьте свой номер:
+                            <div class="gn-contact-panel__item">
+                                или оставьте свой номер:
+                            </div>
                             <form class="gn-contact-panel__form">
 
                                 <!-- base input markup-->

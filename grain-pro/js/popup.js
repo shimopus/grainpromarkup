@@ -14,7 +14,7 @@ var GnPopup = (function() {
         },
         body = document.body,
         some = Array.prototype.some,
-        popupOpened = false;
+        popupOpened = {};
 
     init();
 
@@ -82,18 +82,18 @@ var GnPopup = (function() {
     }
 
     function showPopupByName(popupName) {
-        if (!popupOpened) {
+        if (!popupOpened[popupName]) {
             applyAction(popups, popupName, 'add');
             updateElementsOnShow();
-            popupOpened = true;
+            popupOpened[popupName] = true;
         }
     }
 
     function hidePopupByName(popupName) {
-        if (popupOpened) {
+        if (popupOpened[popupName]) {
             applyAction(popups, popupName, 'remove');
             updateElementsOnHide(options.animationTime);
-            popupOpened = false;
+            popupOpened[popupName] = false;
         }
     }
 
