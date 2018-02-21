@@ -41,7 +41,7 @@ wp_enqueue_script('tabs', get_template_directory_uri() . '/js/tabs.js', array(),
 
                 <div class="gn-simple-form__row _actions-small">
                     <div class="gn-simple-form__control">
-                        <button class="gn-simple-form__button gn-button _primary _full-width jsSubmitMessage">
+                        <button type="submit" class="gn-simple-form__button gn-button _primary _full-width jsSubmitMessage">
                             Перезвоните мне
                         </button>
 

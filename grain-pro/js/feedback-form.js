@@ -12,7 +12,7 @@
 
         $("input[name=theme]").val($("div.jsTabsLink._active").text());
 
-        $.post("/wp-admin/admin-ajax.php", form.serialize())
+        $.post("/wp-admin/admin-ajax.php", $(this).serialize())
             .done(function () {
                 messagePopup.addClass(className);
 
