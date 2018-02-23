@@ -39,7 +39,7 @@ $tableHTML = wp_remote_retrieve_body(wp_remote_get($api_request));
                     <div class="gn-station__text">Введите станцию для расчета цены с доставкой</div>
 
                     <!-- base input markup-->
-                    <div class="gn-input gn-station__input">
+                    <div class="gn-input gn-station__input jsStationInputWrapper">
                         <input class="gn-input__input jsStationsAutocomplete" type="text" placeholder="код или название станции"
                             value="<?php print ($calculateForStationCode ? $calculateForStationCode : "") ?>"
                         >
